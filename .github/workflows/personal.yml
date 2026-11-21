@@ -38,7 +38,7 @@ jobs:
           python ./Scripts/test-migration.py
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           dotnet run --project ./tests/PersonalSmoke/PersonalSmoke.csproj -c Release -- ./.artifacts/downloads/rg.exe
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: Flow-Launcher-Personal
           path: .artifacts/packages/*.zip
