@@ -34,7 +34,7 @@ python ./Scripts/package-personal.py
 
 首次生成包会从 ripgrep 官方 GitHub Release 下载固定的 15.2.0 Windows 版本，并核对固定 SHA-256；插件包附带对应许可文件。
 
-依赖版本沿用 v2.1.4；第一次会恢复 NuGet 包。构建产物在 `Output/Release`，包在 `.artifacts/packages`。GitHub Actions 使用 Windows 构建，提供便携包和两个独立插件包。原始上游工作流保留在历史中，个人分支不触发上游网站或包管理器发布。
+依赖版本沿用 v2.1.4；第一次会恢复 NuGet 包。构建产物在 `Output/Release`，包在 `.artifacts/packages`。重复打包使用新的 bundle 目录，最新路径记录在 `.artifacts/latest-bundle.json`，不会删除旧产物。GitHub Actions 使用 Windows 构建，提供便携包和两个独立插件包，构建产物保留 3 天以减少私有仓库存储占用。原始上游工作流保留在历史中，个人分支不触发上游网站或包管理器发布。
 
 ## 安装和迁移
 

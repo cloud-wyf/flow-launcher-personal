@@ -1,6 +1,8 @@
 from pathlib import Path
 import hashlib
+import datetime
 import json
+import re
 import shutil
 import urllib.request
 import zipfile
@@ -10,9 +12,12 @@ artifacts = root / '.artifacts'
 output = root / 'Output/Release'
 publish = artifacts / 'publish'
 bundle = artifacts / 'bundle'
+if bundle.exists():
+    bundle = artifacts / ('bundle-' + datetime.datetime.now().strftime('%Y%m%d-%H%M%S-%f'))
 packages = artifacts / 'packages'
 catalog = json.loads((root / 'PersonalPlugins/plugins.json').read_text(encoding='utf-8'))
-version = '2.1.4.1'
+version = re.search(r'AssemblyInformationalVersion\("([^"]+)"\)',
+                    (root / 'SolutionAssemblyInfo.cs').read_text(encoding='utf-8-sig')).group(1)
 rg_version = '15.2.0'
 rg_name = 'ripgrep-' + rg_version + '-x86_64-pc-windows-msvc'
 rg_hash = '71b2fef860abe467217a538ff31de02f5258807c0129f771846f87bd029aafc5'
@@ -26,8 +31,6 @@ if hashlib.sha256(archive.read_bytes()).hexdigest() != rg_hash:
     raise RuntimeError('ripgrep 归档哈希不匹配；未使用未经校验的文件。')
 if not (publish / 'Flow.Launcher.exe').exists():
     raise RuntimeError('请先执行 Scripts/build-personal.ps1。')
-if bundle.exists():
-    raise RuntimeError('安装包目录已存在；请使用新的工作目录构建，避免混入旧文件。')
 shutil.copytree(publish, bundle)
 shutil.copytree(output / 'Plugins', bundle / 'Plugins', dirs_exist_ok=True)
 for item in catalog['plugins']:
@@ -57,6 +60,7 @@ manifest = {'version': version, 'files': [
     for path in sorted(bundle.rglob('*')) if path.is_file()
 ]}
 (bundle / 'personal-manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+(artifacts / 'latest-bundle.json').write_text(json.dumps({'bundle': str(bundle), 'version': version}, ensure_ascii=False) + '\n', encoding='utf-8')
 packages.mkdir(parents=True, exist_ok=True)
 for item in catalog['plugins']:
     plugin_dir = bundle / 'UserData/Plugins' / item['assembly']

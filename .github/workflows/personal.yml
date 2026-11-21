@@ -43,6 +43,7 @@ jobs:
           name: Flow-Launcher-Personal
           path: .artifacts/packages/*.zip
           if-no-files-found: error
+          retention-days: 3
   draft-release:
     needs: build
     if: github.event_name == 'workflow_dispatch' && inputs.release_tag != ''
