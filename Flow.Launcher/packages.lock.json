@@ -28,9 +28,9 @@
       },
       "iNKORE.UI.WPF.Modern": {
         "type": "Direct",
-        "requested": "[0.10.1, )",
-        "resolved": "0.10.1",
-        "contentHash": "nRYmBosiL+42eUpLbHeqP7qJqtp5EpzuIMZTpvq4mFV33VB/JjkFg1y82gk50pjkXlAQWDvRyrfSAmPR5AM+3g==",
+        "requested": "[0.11.0, )",
+        "resolved": "0.11.0",
+        "contentHash": "F6DdPt6ibY+Bo5vgfeRlPPJBAr+xjMeOpGtrBlEUh61g1XXUrf+1YfWKYKsJlGHrJAjQ25W+UldYwIvDu+wH7A==",
         "dependencies": {
           "iNKORE.UI.WPF": "1.2.8"
         }
