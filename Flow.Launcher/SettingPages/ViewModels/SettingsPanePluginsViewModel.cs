@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System;
+using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows;
@@ -98,6 +100,76 @@ public partial class SettingsPanePluginsViewModel : BaseModel
     {
         _settings = settings;
         UpdateEnumDropdownLocalizations();
+        SetSourceOrder(SearchSourceOrderStore.Current.Sources);
+    }
+
+    public ObservableCollection<SearchSourceItem> SearchSources { get; } = new();
+
+    public string SourceOrderStatus { get; private set; } = "保存后下一次搜索生效；各类内部按得分排序。";
+
+    internal void ResetClosedWindowDrafts()
+    {
+        FilterText = "";
+        SetSourceOrder(SearchSourceOrderStore.Current.Sources);
+        SourceOrderStatus = "保存后下一次搜索生效；各类内部按得分排序。";
+        foreach (var plugin in PluginViewModels) plugin.IsExpanded = false;
+    }
+
+    private void SetSourceOrder(IEnumerable<string> sources)
+    {
+        SearchSources.Clear();
+        foreach (var key in sources) SearchSources.Add(new SearchSourceItem(key));
+        RefreshSourcePositions();
+    }
+
+    private void RefreshSourcePositions()
+    {
+        for (var index = 0; index < SearchSources.Count; index++)
+        {
+            SearchSources[index].Position = index + 1;
+            SearchSources[index].CanMoveUp = index > 0;
+            SearchSources[index].CanMoveDown = index < SearchSources.Count - 1;
+        }
+    }
+
+    private void MoveSource(SearchSourceItem item, int direction)
+    {
+        var index = SearchSources.IndexOf(item);
+        var destination = index + direction;
+        if (index < 0 || destination < 0 || destination >= SearchSources.Count) return;
+        SearchSources.Move(index, destination);
+        RefreshSourcePositions();
+        SourceOrderStatus = "顺序已调整，点击“保存顺序”生效。";
+        OnPropertyChanged(nameof(SourceOrderStatus));
+    }
+
+    [RelayCommand]
+    private void MoveSourceUp(SearchSourceItem item) => MoveSource(item, -1);
+
+    [RelayCommand]
+    private void MoveSourceDown(SearchSourceItem item) => MoveSource(item, 1);
+
+    [RelayCommand]
+    private void ResetSourceOrder()
+    {
+        SetSourceOrder(SearchSourceOrder.DefaultSources);
+        SourceOrderStatus = "已恢复默认顺序，点击“保存顺序”生效。";
+        OnPropertyChanged(nameof(SourceOrderStatus));
+    }
+
+    [RelayCommand]
+    private void SaveSourceOrder()
+    {
+        try
+        {
+            SearchSourceOrderStore.Current.Save(SearchSources.Select(item => item.Key));
+            SourceOrderStatus = "已保存，下一次搜索生效，无需重启。";
+        }
+        catch (Exception exception)
+        {
+            SourceOrderStatus = "保存失败，原有顺序继续生效：" + exception.Message;
+        }
+        OnPropertyChanged(nameof(SourceOrderStatus));
     }
 
     private string filterText = string.Empty;
@@ -115,6 +187,30 @@ public partial class SettingsPanePluginsViewModel : BaseModel
     }
 
     private List<PluginViewModel>? _pluginViewModels;
+    internal void RefreshNavigationData()
+    {
+        UpdateEnumDropdownLocalizations();
+        if (_pluginViewModels == null) return;
+
+        var plugins = App.API.GetAllPlugins()
+            .OrderBy(plugin => plugin.Metadata.Disabled)
+            .ThenBy(plugin => plugin.Metadata.Name)
+            .Where(plugin => _settings.PluginSettings.GetPluginSettings(plugin.Metadata.ID) != null)
+            .ToList();
+        if (_pluginViewModels.Select(plugin => plugin.PluginPair).SequenceEqual(plugins, ReferenceEqualityComparer.Instance)) return;
+
+        // Preserve existing plugin controls and their edits when only order or membership changed.
+        var existing = _pluginViewModels.ToDictionary(plugin => plugin.PluginPair, ReferenceEqualityComparer.Instance);
+        _pluginViewModels = plugins.Select(plugin => existing.TryGetValue(plugin, out var viewModel)
+            ? viewModel
+            : new PluginViewModel
+            {
+                PluginPair = plugin,
+                PluginSettingsObject = _settings.PluginSettings.GetPluginSettings(plugin.Metadata.ID)
+            }).ToList();
+        OnPropertyChanged(nameof(PluginViewModels));
+    }
+
     // Get all plugins: Initializing & Initialized & Init failed plugins
     // Include init failed ones so that we can uninstall them
     // Include initializing ones so that we can change related settings like action keywords, etc.
@@ -235,4 +331,25 @@ public enum DisplayMode
     Priority,
     SearchDelay,
     HomeOnOff
+}
+
+public class SearchSourceItem : BaseModel
+{
+    public string Key { get; }
+    public string Name => Key switch
+    {
+        "Application" => "应用",
+        "Google" => "谷歌",
+        "Bookmarks" => "书签",
+        "FileName" => "文件名",
+        "Content" => "正文",
+        _ => "其他插件"
+    };
+    public int Position { get; set; }
+    public bool CanMoveUp { get; set; }
+    public bool CanMoveDown { get; set; }
+    public string UpAutomationId => "SourceOrderUp" + Key;
+    public string DownAutomationId => "SourceOrderDown" + Key;
+
+    public SearchSourceItem(string key) => Key = key;
 }

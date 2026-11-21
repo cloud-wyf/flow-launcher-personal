@@ -1,0 +1,1749 @@
+{
+  "upstreamTag": "v2.1.4",
+  "upstreamCommit": "9fe822b398ad9541a1a35fb1c688a006a27f2f9d",
+  "hostPackage": "settings-instant-open-2.1.4-20261121",
+  "pluginPackage": "search-refinements-2.1.4-20261115",
+  "personalBookmarkId": "948d4e4b11de51519ea9ff8a4bb8b4e4",
+  "importedFiles": [
+    {
+      "source": "Flow.Launcher/ActionKeywords.xaml",
+      "target": "Flow.Launcher/ActionKeywords.xaml",
+      "sha256": "e37967ab0c8b53b93f1fa7df28442f66e0dc0d80d5ebbbd63856c29ab00e3829"
+    },
+    {
+      "source": "Flow.Launcher/ActionKeywords.xaml.cs",
+      "target": "Flow.Launcher/ActionKeywords.xaml.cs",
+      "sha256": "bffbbb957e8ab0ef466845dc0ea6e9deaa05cc0258e0134fde2e78a45184f72f"
+    },
+    {
+      "source": "Flow.Launcher/app.manifest",
+      "target": "Flow.Launcher/app.manifest",
+      "sha256": "e8b315ebd58475564e026ed226cc3529148d896732bad16695bcfa3948cd9fc7"
+    },
+    {
+      "source": "Flow.Launcher/app.png",
+      "target": "Flow.Launcher/app.png",
+      "sha256": "1541469676d84bbc26f86dd59d5dba26c58375f83321132d6ac07903830b6460"
+    },
+    {
+      "source": "Flow.Launcher/App.xaml",
+      "target": "Flow.Launcher/App.xaml",
+      "sha256": "919a83e2f15ca3e2137ea17b9dd3dbf0154d83028397ca9738a828752895c947"
+    },
+    {
+      "source": "Flow.Launcher/App.xaml.cs",
+      "target": "Flow.Launcher/App.xaml.cs",
+      "sha256": "c5f5186f00e1b02fef2d1aad4e76228c6e13f6d7a6f598f0cff9165a2bec5183"
+    },
+    {
+      "source": "Flow.Launcher/CustomQueryHotkeySetting.xaml",
+      "target": "Flow.Launcher/CustomQueryHotkeySetting.xaml",
+      "sha256": "0ef5429d6fcc343dfa15884ca1c280252074f65ee4120fb05bdee38bbc9d1643"
+    },
+    {
+      "source": "Flow.Launcher/CustomQueryHotkeySetting.xaml.cs",
+      "target": "Flow.Launcher/CustomQueryHotkeySetting.xaml.cs",
+      "sha256": "ec45f712b3a64e2e96b4131399c7161d57057050b59e275ce8f7156aa76bad65"
+    },
+    {
+      "source": "Flow.Launcher/CustomShortcutSetting.xaml",
+      "target": "Flow.Launcher/CustomShortcutSetting.xaml",
+      "sha256": "7c557c83aeb3077de366bbb83cc3498f17739fd34c9d4d636dcafd051ed9f781"
+    },
+    {
+      "source": "Flow.Launcher/CustomShortcutSetting.xaml.cs",
+      "target": "Flow.Launcher/CustomShortcutSetting.xaml.cs",
+      "sha256": "390fb47ac12c52f2dbb2457458cad89ea18d539a1afff5cc0df5b409a063fd12"
+    },
+    {
+      "source": "Flow.Launcher/FodyWeavers.xml",
+      "target": "Flow.Launcher/FodyWeavers.xml",
+      "sha256": "6dd993f0574aa1a665575f6e4c50700a433452ca0ac55458b1418c0e6dd21eac"
+    },
+    {
+      "source": "Flow.Launcher/HotkeyControl.xaml",
+      "target": "Flow.Launcher/HotkeyControl.xaml",
+      "sha256": "d29682a5d5b63f3bf9e05d5a8cfbfccbc7cac807fa611462418c3f7e4bc4b5e6"
+    },
+    {
+      "source": "Flow.Launcher/HotkeyControl.xaml.cs",
+      "target": "Flow.Launcher/HotkeyControl.xaml.cs",
+      "sha256": "6613820e10926e1a17eb0e55c99338b8b0880eafcf80d37befa930a7988494a0"
+    },
+    {
+      "source": "Flow.Launcher/HotkeyControlDialog.xaml",
+      "target": "Flow.Launcher/HotkeyControlDialog.xaml",
+      "sha256": "82b173fd59a4605d368ecd0206d19d1b2b016b7471b7ca0916778a567bfc4c30"
+    },
+    {
+      "source": "Flow.Launcher/HotkeyControlDialog.xaml.cs",
+      "target": "Flow.Launcher/HotkeyControlDialog.xaml.cs",
+      "sha256": "2f77ad2a862f211e5283fa55af7bd969b67bc61f23449d5eb33e9f551ebb8f4f"
+    },
+    {
+      "source": "Flow.Launcher/MainWindow.xaml",
+      "target": "Flow.Launcher/MainWindow.xaml",
+      "sha256": "8417b65dca473b85756904f0a451216a4d5ef2c643f17716636caefefdd0ea73"
+    },
+    {
+      "source": "Flow.Launcher/MainWindow.xaml.cs",
+      "target": "Flow.Launcher/MainWindow.xaml.cs",
+      "sha256": "d5b78ad17d1c6515d5df81e5f8c89bc90a922955dc588959405d9c267f6eed40"
+    },
+    {
+      "source": "Flow.Launcher/MessageBoxEx.xaml",
+      "target": "Flow.Launcher/MessageBoxEx.xaml",
+      "sha256": "db048e3156cfc144ca714de87c02403c8ed038e2dfd152c80e6b9f6dabc472ef"
+    },
+    {
+      "source": "Flow.Launcher/MessageBoxEx.xaml.cs",
+      "target": "Flow.Launcher/MessageBoxEx.xaml.cs",
+      "sha256": "3ed639a8fedea09ed9561ca76d0499c6f20bf8d92ae3b48841e27b19fabe0dc1"
+    },
+    {
+      "source": "Flow.Launcher/Msg.xaml",
+      "target": "Flow.Launcher/Msg.xaml",
+      "sha256": "571368b97ce05d8609d496dd80aa6d59081320ad47e32118f25fd392bbcda8f6"
+    },
+    {
+      "source": "Flow.Launcher/Msg.xaml.cs",
+      "target": "Flow.Launcher/Msg.xaml.cs",
+      "sha256": "c9864b73b0bac8b5c202aae0146ef0ea1b269daca0021f205856278cc02e3760"
+    },
+    {
+      "source": "Flow.Launcher/MsgWithButton.xaml",
+      "target": "Flow.Launcher/MsgWithButton.xaml",
+      "sha256": "937d6de7ede60ab8409ce00ed6a56db3d9e22dfbd08c1c7c19e27d9f7094c9c3"
+    },
+    {
+      "source": "Flow.Launcher/MsgWithButton.xaml.cs",
+      "target": "Flow.Launcher/MsgWithButton.xaml.cs",
+      "sha256": "ce06e18883835c320da242164e3a8ba46960e0d270c43af42e4e62c4b87ab46b"
+    },
+    {
+      "source": "Flow.Launcher/Notification.cs",
+      "target": "Flow.Launcher/Notification.cs",
+      "sha256": "67b0c11250de631dcf2f80f91676486d1f71fcab49dee0f152b1ff9fabc847b7"
+    },
+    {
+      "source": "Flow.Launcher/PluginUpdateWindow.xaml",
+      "target": "Flow.Launcher/PluginUpdateWindow.xaml",
+      "sha256": "d00c9deaa57c83e9a5e5f27f4b576c8fae615f9c5ec1b6afa332b25d9d8a37c6"
+    },
+    {
+      "source": "Flow.Launcher/PluginUpdateWindow.xaml.cs",
+      "target": "Flow.Launcher/PluginUpdateWindow.xaml.cs",
+      "sha256": "f35989210e4f023eebb538884372c3a7fd41be37424e0836c03c5872e6c3def9"
+    },
+    {
+      "source": "Flow.Launcher/ProgressBoxEx.xaml",
+      "target": "Flow.Launcher/ProgressBoxEx.xaml",
+      "sha256": "0aeb7c90d3cb9e866036ca5a1c77f27e5c3833942b490d66f922de9a4f6cfee0"
+    },
+    {
+      "source": "Flow.Launcher/ProgressBoxEx.xaml.cs",
+      "target": "Flow.Launcher/ProgressBoxEx.xaml.cs",
+      "sha256": "fb8fbd78b7c7f75537c7423054094366d2ccacd56746fd4a21a6514ca6437bb5"
+    },
+    {
+      "source": "Flow.Launcher/PublicAPIInstance.cs",
+      "target": "Flow.Launcher/PublicAPIInstance.cs",
+      "sha256": "1617599a6cbb6223d70e8688e04c1f3355dee76004d692fef4178c489477ba34"
+    },
+    {
+      "source": "Flow.Launcher/ReleaseNotesWindow.xaml",
+      "target": "Flow.Launcher/ReleaseNotesWindow.xaml",
+      "sha256": "9d4880a38065218efd31747c9b13f1d455eb831a7c10d580765ea65f014aaa09"
+    },
+    {
+      "source": "Flow.Launcher/ReleaseNotesWindow.xaml.cs",
+      "target": "Flow.Launcher/ReleaseNotesWindow.xaml.cs",
+      "sha256": "1d313d24c34884a48f30b5ccbcbf45dee450bc7db39bcc0e35a6c042c8b413b9"
+    },
+    {
+      "source": "Flow.Launcher/ReportWindow.xaml",
+      "target": "Flow.Launcher/ReportWindow.xaml",
+      "sha256": "759c22a8d4fd699c5faf73aa07a1e3a438d3f6d9f7c47700a3465fcd350d8f85"
+    },
+    {
+      "source": "Flow.Launcher/ReportWindow.xaml.cs",
+      "target": "Flow.Launcher/ReportWindow.xaml.cs",
+      "sha256": "f6bbf09ebfd09bc1d8ba3e96f29f22bb2aeb620db665d348a80a702902915b34"
+    },
+    {
+      "source": "Flow.Launcher/ResultListBox.xaml",
+      "target": "Flow.Launcher/ResultListBox.xaml",
+      "sha256": "5989c24e65d72ce50061f77c4d40d98afccedaf07177f30d0327a28c134e10cb"
+    },
+    {
+      "source": "Flow.Launcher/ResultListBox.xaml.cs",
+      "target": "Flow.Launcher/ResultListBox.xaml.cs",
+      "sha256": "0ea48e8f21403d2b2942385f1da042d83e990531b06cfd6c078989717e324681"
+    },
+    {
+      "source": "Flow.Launcher/SelectBrowserWindow.xaml",
+      "target": "Flow.Launcher/SelectBrowserWindow.xaml",
+      "sha256": "2e73353de0b05118187e628fd8989c9f6f692c0065198901dcb90e91f5f50263"
+    },
+    {
+      "source": "Flow.Launcher/SelectBrowserWindow.xaml.cs",
+      "target": "Flow.Launcher/SelectBrowserWindow.xaml.cs",
+      "sha256": "c9eba2f0e63e18d8af68151a7f1d9fb3efb93fcfaeb50cca6ab342f6249e14a1"
+    },
+    {
+      "source": "Flow.Launcher/SelectFileManagerWindow.xaml",
+      "target": "Flow.Launcher/SelectFileManagerWindow.xaml",
+      "sha256": "6f293a05975d5dce070bed172ccc20d50581dc576713edec9d2a783a94410211"
+    },
+    {
+      "source": "Flow.Launcher/SelectFileManagerWindow.xaml.cs",
+      "target": "Flow.Launcher/SelectFileManagerWindow.xaml.cs",
+      "sha256": "cc920fceb8538e7ac701321e82957718d04e180cf9c86493269f431cc4d64f87"
+    },
+    {
+      "source": "Flow.Launcher/Settings.cs",
+      "target": "Flow.Launcher/Settings.cs",
+      "sha256": "3bd7389d8405ddaeca85225fea131e613e7863d28f515b3febce3019ee236999"
+    },
+    {
+      "source": "Flow.Launcher/SettingWindow.xaml",
+      "target": "Flow.Launcher/SettingWindow.xaml",
+      "sha256": "c56516ace29ab13db986070a6c52d62bf4b6008205e24100893c3b3c3c6f79a1"
+    },
+    {
+      "source": "Flow.Launcher/SettingWindow.xaml.cs",
+      "target": "Flow.Launcher/SettingWindow.xaml.cs",
+      "sha256": "5f83cebdb64128a7f3772a94edc037351af06350e20cd5facbaa24bc543f613e"
+    },
+    {
+      "source": "Flow.Launcher/WelcomeWindow.xaml",
+      "target": "Flow.Launcher/WelcomeWindow.xaml",
+      "sha256": "edf0e3aed6c9d98efeed3ec1e5963071ad667a5646b0d619f9e6e085c2a31e12"
+    },
+    {
+      "source": "Flow.Launcher/WelcomeWindow.xaml.cs",
+      "target": "Flow.Launcher/WelcomeWindow.xaml.cs",
+      "sha256": "c7c4f2d348f7a7f0ad038f0937b062d2f9a88c05f33ceafaac220b3269300a57"
+    },
+    {
+      "source": "Flow.Launcher/Converters/BadgePositionConverter.cs",
+      "target": "Flow.Launcher/Converters/BadgePositionConverter.cs",
+      "sha256": "074f9e873fe4fb627da07a7dc13e68ed88225b627c69510e7fb13aafac589da1"
+    },
+    {
+      "source": "Flow.Launcher/Converters/BoolToIMEConversionModeConverter.cs",
+      "target": "Flow.Launcher/Converters/BoolToIMEConversionModeConverter.cs",
+      "sha256": "b84703150ca6fb68728a39177b738954994295241a93faafa7474513e1e34bcc"
+    },
+    {
+      "source": "Flow.Launcher/Converters/BoolToVisibilityConverter.cs",
+      "target": "Flow.Launcher/Converters/BoolToVisibilityConverter.cs",
+      "sha256": "263334a1f9f55a788f83be08ce0c90f6f9f5b328242432b866c566a6312fcf51"
+    },
+    {
+      "source": "Flow.Launcher/Converters/BorderClipConverter.cs",
+      "target": "Flow.Launcher/Converters/BorderClipConverter.cs",
+      "sha256": "2b6d6dde053e6b9f3e988650604e53209191a958796fee5f1f10964e881f5303"
+    },
+    {
+      "source": "Flow.Launcher/Converters/CornerRadiusFilterConverter.cs",
+      "target": "Flow.Launcher/Converters/CornerRadiusFilterConverter.cs",
+      "sha256": "97b5c3f82c0fc72a1cdfeabb8cad55eac207e7fc1ad188e23252ed5c67b8723a"
+    },
+    {
+      "source": "Flow.Launcher/Converters/DateTimeFormatToNowConverter.cs",
+      "target": "Flow.Launcher/Converters/DateTimeFormatToNowConverter.cs",
+      "sha256": "b5a16ba57374f8f46df6505496d417e077d808faff6ccc49c1ee2c8dceb88ec0"
+    },
+    {
+      "source": "Flow.Launcher/Converters/DiameterToCenterPointConverter.cs",
+      "target": "Flow.Launcher/Converters/DiameterToCenterPointConverter.cs",
+      "sha256": "c99485f1e566dfaac1927a66662cd4313faee0379b015032992c9a94837d3a1c"
+    },
+    {
+      "source": "Flow.Launcher/Converters/HighlightTextConverter.cs",
+      "target": "Flow.Launcher/Converters/HighlightTextConverter.cs",
+      "sha256": "2a77cfc48837492e239f1fe45d33303be346ba625cf16a45ea304bccc1fb8151"
+    },
+    {
+      "source": "Flow.Launcher/Converters/IconRadiusConverter.cs",
+      "target": "Flow.Launcher/Converters/IconRadiusConverter.cs",
+      "sha256": "afe5debe66a758ee1de9f6c264b5e92acd6169705f4aa3d734139809a1b6dc22"
+    },
+    {
+      "source": "Flow.Launcher/Converters/OpenResultHotkeyVisibilityConverter.cs",
+      "target": "Flow.Launcher/Converters/OpenResultHotkeyVisibilityConverter.cs",
+      "sha256": "404d01e7e5854bce63ff3d815acc05fa9192fb0d6594845292520069df2fdb4d"
+    },
+    {
+      "source": "Flow.Launcher/Converters/OrdinalConverter.cs",
+      "target": "Flow.Launcher/Converters/OrdinalConverter.cs",
+      "sha256": "d93a6774259337c18c16329fff87c8360c193fa90ac374f508947b6c9af1c875"
+    },
+    {
+      "source": "Flow.Launcher/Converters/PlacementRectangleConverter.cs",
+      "target": "Flow.Launcher/Converters/PlacementRectangleConverter.cs",
+      "sha256": "402788a37a6c1dc379006231b2ce77bca184d2a1db48b43da1458c00ea5ff7f3"
+    },
+    {
+      "source": "Flow.Launcher/Converters/QuerySuggestionBoxConverter.cs",
+      "target": "Flow.Launcher/Converters/QuerySuggestionBoxConverter.cs",
+      "sha256": "3396dc12ca96b53aa7056be7be61905eb46e492347ad1c7324009dfc7936ace4"
+    },
+    {
+      "source": "Flow.Launcher/Converters/SharedSizeGroupConverter.cs",
+      "target": "Flow.Launcher/Converters/SharedSizeGroupConverter.cs",
+      "sha256": "98f3ffafcecab59d5cf525e3b9e835c13a660a0a67a3801dc2d74bed4ac52c1b"
+    },
+    {
+      "source": "Flow.Launcher/Converters/SizeRatioConverter.cs",
+      "target": "Flow.Launcher/Converters/SizeRatioConverter.cs",
+      "sha256": "335f0f74448f9ffc5ec07e2a7af71535efa6bd2586e1b761b073f1f2b0e68453"
+    },
+    {
+      "source": "Flow.Launcher/Converters/StringToKeyBindingConverter.cs",
+      "target": "Flow.Launcher/Converters/StringToKeyBindingConverter.cs",
+      "sha256": "73794ddbc22b6d2731e22c45dba9a7c530458b15b7b992647512fda7258438cb"
+    },
+    {
+      "source": "Flow.Launcher/Converters/TextConverter.cs",
+      "target": "Flow.Launcher/Converters/TextConverter.cs",
+      "sha256": "37af457e285656ccc310784c5fd6574a75cfe032407dd4e4a352cab7e4b064ec"
+    },
+    {
+      "source": "Flow.Launcher/Helper/AutoStartup.cs",
+      "target": "Flow.Launcher/Helper/AutoStartup.cs",
+      "sha256": "712be50cb946793ec6d55ff9b83b1b03df3f0f84d718bd2523532afa808ad317"
+    },
+    {
+      "source": "Flow.Launcher/Helper/BorderHelper.cs",
+      "target": "Flow.Launcher/Helper/BorderHelper.cs",
+      "sha256": "5262a6ab248369353b693b76dedd128ab19049378b06099813d2159582f256d9"
+    },
+    {
+      "source": "Flow.Launcher/Helper/DataWebRequestFactory.cs",
+      "target": "Flow.Launcher/Helper/DataWebRequestFactory.cs",
+      "sha256": "7985d7427b0068b0e3e40ce11d2fb045717abb3ce9bcf22adf689ffa3c15783a"
+    },
+    {
+      "source": "Flow.Launcher/Helper/ErrorReporting.cs",
+      "target": "Flow.Launcher/Helper/ErrorReporting.cs",
+      "sha256": "88335a5cc493034b6d2414c1993c63915af5ba737ac46dccd26657cffd598be0"
+    },
+    {
+      "source": "Flow.Launcher/Helper/ExceptionHelper.cs",
+      "target": "Flow.Launcher/Helper/ExceptionHelper.cs",
+      "sha256": "cbf1ecf8ccf6a87ad913ab3e597a928b94dd5939fa454c98fa4b98b481f47f89"
+    },
+    {
+      "source": "Flow.Launcher/Helper/HotKeyMapper.cs",
+      "target": "Flow.Launcher/Helper/HotKeyMapper.cs",
+      "sha256": "6672949c4382262e1f91f634a0421c8a59e5aa7ebef8bca94bef9ec592ae8a22"
+    },
+    {
+      "source": "Flow.Launcher/Helper/SettingsWindowHost.cs",
+      "target": "Flow.Launcher/Helper/SettingsWindowHost.cs",
+      "sha256": "c5a13a0280394dccc50a3cfa1a4cdb6706521f23c45b511ea6c879ff841eab6a"
+    },
+    {
+      "source": "Flow.Launcher/Helper/SingleInstance.cs",
+      "target": "Flow.Launcher/Helper/SingleInstance.cs",
+      "sha256": "4f03f87c1105e325fd88f30c83060e0e6e1804d3b3820aebdc4aa9b17f62b284"
+    },
+    {
+      "source": "Flow.Launcher/Helper/SingletonWindowOpener.cs",
+      "target": "Flow.Launcher/Helper/SingletonWindowOpener.cs",
+      "sha256": "f4c7eb5040df69a29764b90bd110aa4d9ef40acbe89a27f928f0215ff76ef454"
+    },
+    {
+      "source": "Flow.Launcher/Helper/SyntaxSugars.cs",
+      "target": "Flow.Launcher/Helper/SyntaxSugars.cs",
+      "sha256": "50c04c655c3aba4d498c1c8b4c65e0d1bf5fc58f2dd55a5902f8f6b227175526"
+    },
+    {
+      "source": "Flow.Launcher/Helper/WallpaperPathRetrieval.cs",
+      "target": "Flow.Launcher/Helper/WallpaperPathRetrieval.cs",
+      "sha256": "98a44f876b2c9fa668e9faa740f79126f9356d50e43ece2bd59d10761095e2ad"
+    },
+    {
+      "source": "Flow.Launcher/Helper/WindowsMediaPlayerHelper.cs",
+      "target": "Flow.Launcher/Helper/WindowsMediaPlayerHelper.cs",
+      "sha256": "a2634899e4e733dd250ed4b08e447acff8e58a53a2c03d71dbf79b85bf1603f6"
+    },
+    {
+      "source": "Flow.Launcher/Images/app.ico",
+      "target": "Flow.Launcher/Images/app.ico",
+      "sha256": "10d0d8ef4bca985080d0ffa8178451c408840d3ba0da66342ce9a7048febb0e3"
+    },
+    {
+      "source": "Flow.Launcher/Images/app.png",
+      "target": "Flow.Launcher/Images/app.png",
+      "sha256": "1541469676d84bbc26f86dd59d5dba26c58375f83321132d6ac07903830b6460"
+    },
+    {
+      "source": "Flow.Launcher/Images/app_error.png",
+      "target": "Flow.Launcher/Images/app_error.png",
+      "sha256": "f8ecb8a1b22df408a96fd63c740b2659292bc624508cd79bc0e046624c7d843d"
+    },
+    {
+      "source": "Flow.Launcher/Images/app_missing_img.png",
+      "target": "Flow.Launcher/Images/app_missing_img.png",
+      "sha256": "fd01513328f6d25c7ec50f43bd7192dce87d93833da785114f051618d39d504c"
+    },
+    {
+      "source": "Flow.Launcher/Images/Browser.png",
+      "target": "Flow.Launcher/Images/Browser.png",
+      "sha256": "e2d42bacf74d0078612e6022637817e164363587e4ce6a6d4d2d9b15cb124015"
+    },
+    {
+      "source": "Flow.Launcher/Images/calculator.png",
+      "target": "Flow.Launcher/Images/calculator.png",
+      "sha256": "638052d2696cf7c43da718924f52fea977c482b27eacb76fb546ea69fc1bdb2f"
+    },
+    {
+      "source": "Flow.Launcher/Images/cancel.png",
+      "target": "Flow.Launcher/Images/cancel.png",
+      "sha256": "952c10b49ceacac668b51b3b3a6a88e103062133e4ed76e3760cac8bd9caa110"
+    },
+    {
+      "source": "Flow.Launcher/Images/close.png",
+      "target": "Flow.Launcher/Images/close.png",
+      "sha256": "5a80d16f36e90da8bf7d6a97b9caa598aa3291792061417a4427033dfaeea187"
+    },
+    {
+      "source": "Flow.Launcher/Images/cmd.png",
+      "target": "Flow.Launcher/Images/cmd.png",
+      "sha256": "a1a9df4aba13e71702a557a167a057be2c1cb011ad532240ddb44cd1e42b55f8"
+    },
+    {
+      "source": "Flow.Launcher/Images/color.png",
+      "target": "Flow.Launcher/Images/color.png",
+      "sha256": "0a6d60b57614262cf57f9d47b7794faab05bf3141cc41d170224b25fe0f91f2c"
+    },
+    {
+      "source": "Flow.Launcher/Images/copy.png",
+      "target": "Flow.Launcher/Images/copy.png",
+      "sha256": "796ac9a7fa2f6f9dd0c4cdc111e01c2212d56ee25a6c034f730d2222f568ae3e"
+    },
+    {
+      "source": "Flow.Launcher/Images/dev.ico",
+      "target": "Flow.Launcher/Images/dev.ico",
+      "sha256": "4e897e925f6320fbdecaecdc0b608ac6606dfb1a981fda07c81b62310bbd07f3"
+    },
+    {
+      "source": "Flow.Launcher/Images/down.png",
+      "target": "Flow.Launcher/Images/down.png",
+      "sha256": "c39901b026fe832bb2a7871fb46ffe7fc46dcff035cbcbb7159d0ea3d6b05b8a"
+    },
+    {
+      "source": "Flow.Launcher/Images/Error.png",
+      "target": "Flow.Launcher/Images/Error.png",
+      "sha256": "01492095aa5cad4ab9bd621f9f452b4195ea1193af6d974f0e84afd8accea24e"
+    },
+    {
+      "source": "Flow.Launcher/Images/Exclamation.png",
+      "target": "Flow.Launcher/Images/Exclamation.png",
+      "sha256": "55ffe017bd1d96bdea5856c8134fb133a0b50193e6e0d27f01f84e3af25b7c26"
+    },
+    {
+      "source": "Flow.Launcher/Images/file.png",
+      "target": "Flow.Launcher/Images/file.png",
+      "sha256": "5b80da250e5ab2019afb4f3b5012492c3241b6c5c9d225ecedc7832aff28bb72"
+    },
+    {
+      "source": "Flow.Launcher/Images/find.png",
+      "target": "Flow.Launcher/Images/find.png",
+      "sha256": "015df3c75a177b056863e1b10c2ea1e95266d867e3dd1975ff30dc82f185759c"
+    },
+    {
+      "source": "Flow.Launcher/Images/folder.png",
+      "target": "Flow.Launcher/Images/folder.png",
+      "sha256": "fce1c5f39c6ee750e99875e1a878a6962c88c700bc9f596999bbb0e6a59336a1"
+    },
+    {
+      "source": "Flow.Launcher/Images/gamemode.ico",
+      "target": "Flow.Launcher/Images/gamemode.ico",
+      "sha256": "f079e01e25b4b32eac844f13466b2246b9f30c8651805fab4a8ad411c80a87d3"
+    },
+    {
+      "source": "Flow.Launcher/Images/history.png",
+      "target": "Flow.Launcher/Images/history.png",
+      "sha256": "16f1f7b352428b0457f03d21de5ea7caaae9fa93e74cbaa65f7d27f71dd4c3d5"
+    },
+    {
+      "source": "Flow.Launcher/Images/illustration_01.png",
+      "target": "Flow.Launcher/Images/illustration_01.png",
+      "sha256": "5a38371284f4d52c102e5de4352c183f3342fff596a3c09a3ad5702c68b2d986"
+    },
+    {
+      "source": "Flow.Launcher/Images/illustration_02.png",
+      "target": "Flow.Launcher/Images/illustration_02.png",
+      "sha256": "f265519e4f8c2002d4d6eba362fe3e05e74489576ad0dea17a0dbb07b9c4574e"
+    },
+    {
+      "source": "Flow.Launcher/Images/image.png",
+      "target": "Flow.Launcher/Images/image.png",
+      "sha256": "aff6fd36b82e9a356c2748e91ec284301fb7594c7d69ad39ebf109c213dee7b6"
+    },
+    {
+      "source": "Flow.Launcher/Images/info.png",
+      "target": "Flow.Launcher/Images/info.png",
+      "sha256": "5969a99ee8895cfebc9c129345369c752d1534fd7f617ed1c4879ee73ecd363f"
+    },
+    {
+      "source": "Flow.Launcher/Images/Information.png",
+      "target": "Flow.Launcher/Images/Information.png",
+      "sha256": "d91c706b214861442e28b1dd04e955c223ae53b20f9e3e178267fc883164851a"
+    },
+    {
+      "source": "Flow.Launcher/Images/keyboard.png",
+      "target": "Flow.Launcher/Images/keyboard.png",
+      "sha256": "aa8e7cf8f42a1761605576397c0f47baa37f570691e32f605a231be51b9797c7"
+    },
+    {
+      "source": "Flow.Launcher/Images/Link.png",
+      "target": "Flow.Launcher/Images/Link.png",
+      "sha256": "02b1f5a5d47304e3a9af8359f79ac1849962807299d23effff848c786d9ad9e3"
+    },
+    {
+      "source": "Flow.Launcher/Images/loading.png",
+      "target": "Flow.Launcher/Images/loading.png",
+      "sha256": "210b553fcde27d46485194d6ae96d3133289d0eaa2624b164723cccc15b24295"
+    },
+    {
+      "source": "Flow.Launcher/Images/lock.png",
+      "target": "Flow.Launcher/Images/lock.png",
+      "sha256": "a57a6899d5e87b6e65d36d3876dae866953f95c107cffea60d9e156c9aaff970"
+    },
+    {
+      "source": "Flow.Launcher/Images/logoff.png",
+      "target": "Flow.Launcher/Images/logoff.png",
+      "sha256": "ad799e35b42b8dd0334f782096da333cf8b49525f1cf186d08a86804264ceb6e"
+    },
+    {
+      "source": "Flow.Launcher/Images/mainsearch.svg",
+      "target": "Flow.Launcher/Images/mainsearch.svg",
+      "sha256": "60e01c7b54df51b1baba284ba24958e7b457be1eed3678c7722359e2bdd9c95e"
+    },
+    {
+      "source": "Flow.Launcher/Images/New Message.png",
+      "target": "Flow.Launcher/Images/New Message.png",
+      "sha256": "ee09b757e91f39affda43d66dbb6a1bfab2a2c30f8c59e4254dfe0ccb25406eb"
+    },
+    {
+      "source": "Flow.Launcher/Images/ok.png",
+      "target": "Flow.Launcher/Images/ok.png",
+      "sha256": "028032327bbe76b2d836672063556b14ec5fe14eba93aeccae48274cc404a0b7"
+    },
+    {
+      "source": "Flow.Launcher/Images/open.png",
+      "target": "Flow.Launcher/Images/open.png",
+      "sha256": "361cb37fa5dd4de10c57f28ab5505e97117e5fbe5430cec9f14e15b2e70e203e"
+    },
+    {
+      "source": "Flow.Launcher/Images/page_img01.png",
+      "target": "Flow.Launcher/Images/page_img01.png",
+      "sha256": "ebc69333aa8e829afca4977a411930e4ac2076e589681e03032247970e8bea36"
+    },
+    {
+      "source": "Flow.Launcher/Images/plugin.png",
+      "target": "Flow.Launcher/Images/plugin.png",
+      "sha256": "388bc0a75153496dd2fba2a89c6e287910f6cbeab659456d17b21b6f035eff3c"
+    },
+    {
+      "source": "Flow.Launcher/Images/plugins.png",
+      "target": "Flow.Launcher/Images/plugins.png",
+      "sha256": "e068b6f3ce3466470fadd2de800bc8a73924fdb0b6ce3e723b6c59aaa4c7d9ad"
+    },
+    {
+      "source": "Flow.Launcher/Images/proxy.png",
+      "target": "Flow.Launcher/Images/proxy.png",
+      "sha256": "9b123f96d558f160d7e9281848317ec1c1ddeb07453c86eee9b5a31880e70551"
+    },
+    {
+      "source": "Flow.Launcher/Images/Question.png",
+      "target": "Flow.Launcher/Images/Question.png",
+      "sha256": "255cc261dcd33918528b466d4a35958057f6fd56181c673dfd40f419c1dfa5a3"
+    },
+    {
+      "source": "Flow.Launcher/Images/recyclebin.png",
+      "target": "Flow.Launcher/Images/recyclebin.png",
+      "sha256": "34c2e9786f3f498fdff3a8a9521dd2f706b856c38edc95612f3e9b2918ff5181"
+    },
+    {
+      "source": "Flow.Launcher/Images/restart.png",
+      "target": "Flow.Launcher/Images/restart.png",
+      "sha256": "8681504a8a781fd67ff4edb54cafc527b6b2222356889e7f52cc58fbe923d688"
+    },
+    {
+      "source": "Flow.Launcher/Images/search.png",
+      "target": "Flow.Launcher/Images/search.png",
+      "sha256": "015df3c75a177b056863e1b10c2ea1e95266d867e3dd1975ff30dc82f185759c"
+    },
+    {
+      "source": "Flow.Launcher/Images/settings.png",
+      "target": "Flow.Launcher/Images/settings.png",
+      "sha256": "5dfc8cd4b790e2f0771b9ba2b1863da89e5725c6cd6beffe7f8a7bdce6f185b2"
+    },
+    {
+      "source": "Flow.Launcher/Images/shutdown.png",
+      "target": "Flow.Launcher/Images/shutdown.png",
+      "sha256": "470c02253964bba50719941c108e76a02075040a59276ec2a4b6181a16e63c29"
+    },
+    {
+      "source": "Flow.Launcher/Images/sleep.png",
+      "target": "Flow.Launcher/Images/sleep.png",
+      "sha256": "91a905b1ad76f5251046e279d26d85f2aacb374faa7ba8bb1e90f44341ecfe61"
+    },
+    {
+      "source": "Flow.Launcher/Images/store.png",
+      "target": "Flow.Launcher/Images/store.png",
+      "sha256": "7fd1b1f415022dfe05bfa2933faae3296ac0189368c3e063ea6f98b48b7689b4"
+    },
+    {
+      "source": "Flow.Launcher/Images/theme.png",
+      "target": "Flow.Launcher/Images/theme.png",
+      "sha256": "48ba72e07828bfc0da374c014843b2930cfcc7265c812e8ca9b61755d448a65e"
+    },
+    {
+      "source": "Flow.Launcher/Images/up.png",
+      "target": "Flow.Launcher/Images/up.png",
+      "sha256": "70f0e5c969f4858e80176b0ace11b46b5a79cbe030b134f8f3257509f5c0d89c"
+    },
+    {
+      "source": "Flow.Launcher/Images/update.png",
+      "target": "Flow.Launcher/Images/update.png",
+      "sha256": "26e3facdd1ed5db41c211324bc114d248cc623d55f0744821e27f1f52e61c085"
+    },
+    {
+      "source": "Flow.Launcher/Images/wizard.png",
+      "target": "Flow.Launcher/Images/wizard.png",
+      "sha256": "d2ff4c822de321adf7c5321043ebc6fd6d120a004fa880a56019a10b8c109923"
+    },
+    {
+      "source": "Flow.Launcher/Languages/ar.xaml",
+      "target": "Flow.Launcher/Languages/ar.xaml",
+      "sha256": "d57f92625a4b186b1a1c2d9c2134265256274045841e8f34593bc82a4962ba75"
+    },
+    {
+      "source": "Flow.Launcher/Languages/cs.xaml",
+      "target": "Flow.Launcher/Languages/cs.xaml",
+      "sha256": "636723d63d0a506b44e6b358b5ab4deebf18e1e230f75e9583fd2fc284334cec"
+    },
+    {
+      "source": "Flow.Launcher/Languages/da.xaml",
+      "target": "Flow.Launcher/Languages/da.xaml",
+      "sha256": "4fc9f0b2c00429385f4628e42a873ccd872b9827ba6aa3c3316685f142923074"
+    },
+    {
+      "source": "Flow.Launcher/Languages/de.xaml",
+      "target": "Flow.Launcher/Languages/de.xaml",
+      "sha256": "1cd3adac1428d10c3aca465115209bf0c28ffd94955ef2759f661000360e4606"
+    },
+    {
+      "source": "Flow.Launcher/Languages/en.xaml",
+      "target": "Flow.Launcher/Languages/en.xaml",
+      "sha256": "b1209101be680994ccc96d85f2bbae1227621e2ded503a03962ddb6e0428bf31"
+    },
+    {
+      "source": "Flow.Launcher/Languages/es-419.xaml",
+      "target": "Flow.Launcher/Languages/es-419.xaml",
+      "sha256": "1d0a8e6e212a62b3a752c7afd70fe1c94dada6b911a7ca1681a6ad7b4f4c1fc1"
+    },
+    {
+      "source": "Flow.Launcher/Languages/es.xaml",
+      "target": "Flow.Launcher/Languages/es.xaml",
+      "sha256": "ee226c7e95b864b73cd3c60ffe9fa6beb4783c1851b90ec609f88942c97f77fe"
+    },
+    {
+      "source": "Flow.Launcher/Languages/fr.xaml",
+      "target": "Flow.Launcher/Languages/fr.xaml",
+      "sha256": "cee8b62c35fafb979068831479e92050a92209246b3677091c28e642e4b74ed7"
+    },
+    {
+      "source": "Flow.Launcher/Languages/he.xaml",
+      "target": "Flow.Launcher/Languages/he.xaml",
+      "sha256": "169cecf55b7ceb0175b78d3b020da13ee4479be14e3e6c2d88daa79d36c8919d"
+    },
+    {
+      "source": "Flow.Launcher/Languages/it.xaml",
+      "target": "Flow.Launcher/Languages/it.xaml",
+      "sha256": "cb27d39e78e73929367a6306fda802e440cbdab77108ef9e15e4324607a8583a"
+    },
+    {
+      "source": "Flow.Launcher/Languages/ja.xaml",
+      "target": "Flow.Launcher/Languages/ja.xaml",
+      "sha256": "b5051e09d421657524c497330b3d857b7d7b9cbf906dc164eb7ab4a0823d0684"
+    },
+    {
+      "source": "Flow.Launcher/Languages/ko.xaml",
+      "target": "Flow.Launcher/Languages/ko.xaml",
+      "sha256": "192b3e79ec6dcc4a2f81b326937b1c3544168d9e2527eb01541e6c3a410fd6a3"
+    },
+    {
+      "source": "Flow.Launcher/Languages/nb-NO.xaml",
+      "target": "Flow.Launcher/Languages/nb-NO.xaml",
+      "sha256": "6e82201ecd755a968a53169c48625eb01fb0bace142a8f78a7daa29ebf793914"
+    },
+    {
+      "source": "Flow.Launcher/Languages/nb.xaml",
+      "target": "Flow.Launcher/Languages/nb.xaml",
+      "sha256": "a8d1a0a4777da6e4c27b25bb2336ac325cf35c32f0a285f789ecd58e19bebd86"
+    },
+    {
+      "source": "Flow.Launcher/Languages/nl.xaml",
+      "target": "Flow.Launcher/Languages/nl.xaml",
+      "sha256": "9c29fcd139b41619f8b15b66fb726e69b703ff8cc225af3a62f3748e5e9b5874"
+    },
+    {
+      "source": "Flow.Launcher/Languages/pl.xaml",
+      "target": "Flow.Launcher/Languages/pl.xaml",
+      "sha256": "e6ef943d72b3764611fc5ce63f5a22b8a0078216c0133d7a0c905a2ba3100d2c"
+    },
+    {
+      "source": "Flow.Launcher/Languages/pt-br.xaml",
+      "target": "Flow.Launcher/Languages/pt-br.xaml",
+      "sha256": "79d4101934dedd30f2eb0aac10f2c77993a5d4d13ac6505c35e1930eb0f638df"
+    },
+    {
+      "source": "Flow.Launcher/Languages/pt-pt.xaml",
+      "target": "Flow.Launcher/Languages/pt-pt.xaml",
+      "sha256": "ea684c1ad109720b2ef6b27840b9e0f032e9b6ded5f78ec25f1118fb9fa234e6"
+    },
+    {
+      "source": "Flow.Launcher/Languages/ru.xaml",
+      "target": "Flow.Launcher/Languages/ru.xaml",
+      "sha256": "7a2000955cb1079d266bc66c2167155ab735e6102c729d48fed328c00dfc8240"
+    },
+    {
+      "source": "Flow.Launcher/Languages/sk.xaml",
+      "target": "Flow.Launcher/Languages/sk.xaml",
+      "sha256": "7ba8f7f86c94f891e9b69edb84e1f858272c6768172d9459bbb9e801f1e27336"
+    },
+    {
+      "source": "Flow.Launcher/Languages/sr-Cyrl-RS.xaml",
+      "target": "Flow.Launcher/Languages/sr-Cyrl-RS.xaml",
+      "sha256": "537eed3ba12d5376e8111799bfe4e103e21616b03352e9624be093e338f2716a"
+    },
+    {
+      "source": "Flow.Launcher/Languages/sr.xaml",
+      "target": "Flow.Launcher/Languages/sr.xaml",
+      "sha256": "6570ba3c08ab5e23221a874d5e39363753c71b46c2966d070df26ca6293e2238"
+    },
+    {
+      "source": "Flow.Launcher/Languages/tr.xaml",
+      "target": "Flow.Launcher/Languages/tr.xaml",
+      "sha256": "e3fb64cf97132cb593f371178e293e05ca82acd5a11293a97eb1702ddb4d1acd"
+    },
+    {
+      "source": "Flow.Launcher/Languages/uk-UA.xaml",
+      "target": "Flow.Launcher/Languages/uk-UA.xaml",
+      "sha256": "fccf2474b9106ab5d3f6af4548541088d744c1bcb79b55114d6450600dd4b3c6"
+    },
+    {
+      "source": "Flow.Launcher/Languages/vi.xaml",
+      "target": "Flow.Launcher/Languages/vi.xaml",
+      "sha256": "6249ea77a0deb8277b5b6e98408cad9d04eed7632100b3ba9acb9e33279423f0"
+    },
+    {
+      "source": "Flow.Launcher/Languages/zh-cn.xaml",
+      "target": "Flow.Launcher/Languages/zh-cn.xaml",
+      "sha256": "26c1e69a05c06371435fc2a4ab421d9f0d00ab5a3a266b29019c9fdea62492b6"
+    },
+    {
+      "source": "Flow.Launcher/Languages/zh-tw.xaml",
+      "target": "Flow.Launcher/Languages/zh-tw.xaml",
+      "sha256": "3bafc3932911058f2fa6815ef8bd466e5183b22dd881414a681b84022e399bdf"
+    },
+    {
+      "source": "Flow.Launcher/Properties/AssemblyInfo.cs",
+      "target": "Flow.Launcher/Properties/AssemblyInfo.cs",
+      "sha256": "6893921c848118333a7dc31e5121f0e2d3ff8c765baf1bba4cff5a6537a3a994"
+    },
+    {
+      "source": "Flow.Launcher/Properties/Resources.Designer.cs",
+      "target": "Flow.Launcher/Properties/Resources.Designer.cs",
+      "sha256": "9fb6b062cecd39b6bd2711f0c7a569a3ed68505b41f6b9dd44aa491d8704f21e"
+    },
+    {
+      "source": "Flow.Launcher/Properties/Resources.resx",
+      "target": "Flow.Launcher/Properties/Resources.resx",
+      "sha256": "64c51fad3f9f72fc74bc0900fe77ed1cf1aa798dc2f9b72edc80ae89b689f40a"
+    },
+    {
+      "source": "Flow.Launcher/Properties/Settings.Designer.cs",
+      "target": "Flow.Launcher/Properties/Settings.Designer.cs",
+      "sha256": "67b59aa20e8759f34603dee991f317312f5ed3c730c7c96fdbbd598db6dd0e48"
+    },
+    {
+      "source": "Flow.Launcher/Properties/Settings.settings",
+      "target": "Flow.Launcher/Properties/Settings.settings",
+      "sha256": "f685fef4c40a2b561b509bb421d0040c3ca3204da7c6216c87baf0aeebe6becd"
+    },
+    {
+      "source": "Flow.Launcher/Resources/app.ico",
+      "target": "Flow.Launcher/Resources/app.ico",
+      "sha256": "10d0d8ef4bca985080d0ffa8178451c408840d3ba0da66342ce9a7048febb0e3"
+    },
+    {
+      "source": "Flow.Launcher/Resources/CustomControlTemplate.xaml",
+      "target": "Flow.Launcher/Resources/CustomControlTemplate.xaml",
+      "sha256": "1f174dab519ef6f083ce8c959025faadf44d466d8596d52027ef2f41495d19bd"
+    },
+    {
+      "source": "Flow.Launcher/Resources/Dark.xaml",
+      "target": "Flow.Launcher/Resources/Dark.xaml",
+      "sha256": "337a310d0ec044d03fc7fd54ef5af4c6e5e657dc252ef438470528d479600c4f"
+    },
+    {
+      "source": "Flow.Launcher/Resources/dev.ico",
+      "target": "Flow.Launcher/Resources/dev.ico",
+      "sha256": "553e58420039098f52abebcf8d150770493b159be5e674c5c14366a9069c832f"
+    },
+    {
+      "source": "Flow.Launcher/Resources/double_pinyin.json",
+      "target": "Flow.Launcher/Resources/double_pinyin.json",
+      "sha256": "ff361feeaa44508978ebc4e40a7a403705d526a487cf1b0ebe16897ae548ce2c"
+    },
+    {
+      "source": "Flow.Launcher/Resources/Light.xaml",
+      "target": "Flow.Launcher/Resources/Light.xaml",
+      "sha256": "bf026afdb7b82edbed212f4a9307eae4d05f5c4ce29a499ab5fbe13bbc2231a1"
+    },
+    {
+      "source": "Flow.Launcher/Resources/open.wav",
+      "target": "Flow.Launcher/Resources/open.wav",
+      "sha256": "fa8b85eee292304c8710febcdbf00f7b8c00f33d9dca07c6b95c41d4628783fd"
+    },
+    {
+      "source": "Flow.Launcher/Resources/SegoeFluentIcons.ttf",
+      "target": "Flow.Launcher/Resources/SegoeFluentIcons.ttf",
+      "sha256": "82f5dc0e0cb9f41efad49e5423c76768ae0fc96e062a0893b6c729b863033013"
+    },
+    {
+      "source": "Flow.Launcher/Resources/SettingWindowStyle.xaml",
+      "target": "Flow.Launcher/Resources/SettingWindowStyle.xaml",
+      "sha256": "743b3673a220e922d2e4e6067ca2b8a089e5d7f062fda416119a4fafcc06f895"
+    },
+    {
+      "source": "Flow.Launcher/SettingPages/IPreloadableSettingsPage.cs",
+      "target": "Flow.Launcher/SettingPages/IPreloadableSettingsPage.cs",
+      "sha256": "d4591da13644545517768ee1f884a4d23c9eef1ba095073d30a74ff0940c5d07"
+    },
+    {
+      "source": "Flow.Launcher/SettingPages/SettingsPageDeck.cs",
+      "target": "Flow.Launcher/SettingPages/SettingsPageDeck.cs",
+      "sha256": "c7911e9f8c0133f72f1dcbb8b5da86c661f958cef8317b2b5fe82d7bf3b6e793"
+    },
+    {
+      "source": "Flow.Launcher/SettingPages/UiStallMonitor.cs",
+      "target": "Flow.Launcher/SettingPages/UiStallMonitor.cs",
+      "sha256": "2a049dade43f85ab5129420ba916e11473123b530cf598a1dd4c914de530acb9"
+    },
+    {
+      "source": "Flow.Launcher/Storage/HistoryItem.cs",
+      "target": "Flow.Launcher/Storage/HistoryItem.cs",
+      "sha256": "ae6eecbf7a5f94553914308a8ebf941708c2cc8be0c41c24805b3ca49194e057"
+    },
+    {
+      "source": "Flow.Launcher/Storage/QueryHistory.cs",
+      "target": "Flow.Launcher/Storage/QueryHistory.cs",
+      "sha256": "44585feb176b87da3262dfd1085d19eb1e528e0497b1ad04a37d9d3b841e2501"
+    },
+    {
+      "source": "Flow.Launcher/Storage/TopMostRecord.cs",
+      "target": "Flow.Launcher/Storage/TopMostRecord.cs",
+      "sha256": "df3e7e60a50aaf61f8c243ba85898d04e71ebfdd39c3ef89b5b6000c0509bacf"
+    },
+    {
+      "source": "Flow.Launcher/Storage/UserSelectedRecord.cs",
+      "target": "Flow.Launcher/Storage/UserSelectedRecord.cs",
+      "sha256": "d9e9224299815c30847c6fca72ba047785582da75b96b0425319d80353df725b"
+    },
+    {
+      "source": "Flow.Launcher/Themes/Base.xaml",
+      "target": "Flow.Launcher/Themes/Base.xaml",
+      "sha256": "bee86eaa3b9a0663ecdee1ac126c92b8e312db66a38da1a24252756a56cb8ba8"
+    },
+    {
+      "source": "Flow.Launcher/Themes/BlurBlack Darker.xaml",
+      "target": "Flow.Launcher/Themes/BlurBlack Darker.xaml",
+      "sha256": "9c3ab2e9360c8bcad1c8c4cd5cb7955f948451e7394d44d3ce4f0685b7acc944"
+    },
+    {
+      "source": "Flow.Launcher/Themes/BlurBlack.xaml",
+      "target": "Flow.Launcher/Themes/BlurBlack.xaml",
+      "sha256": "26cc72b97fdcf2d7a8ee5bb9bc58c4f5483cc18989c9cf80c9f4cf039d577125"
+    },
+    {
+      "source": "Flow.Launcher/Themes/BlurWhite.xaml",
+      "target": "Flow.Launcher/Themes/BlurWhite.xaml",
+      "sha256": "f90747b8486de729b7ddf5e4d9083ca53d94e12df9d1802498a42b84a3b50d80"
+    },
+    {
+      "source": "Flow.Launcher/Themes/Circle System.xaml",
+      "target": "Flow.Launcher/Themes/Circle System.xaml",
+      "sha256": "30f08b4f5ae91e4e89bac146840aee22c9615cdaeb1cc2b41820accb244a15dd"
+    },
+    {
+      "source": "Flow.Launcher/Themes/Cyan Dark.xaml",
+      "target": "Flow.Launcher/Themes/Cyan Dark.xaml",
+      "sha256": "799d3fde3928545598691c905e6a54ef873d54a304ac35f750eb1f309401c491"
+    },
+    {
+      "source": "Flow.Launcher/Themes/Darker Glass.xaml",
+      "target": "Flow.Launcher/Themes/Darker Glass.xaml",
+      "sha256": "6c4f25fc9964c5665bf30ca2fa259da8caf971482ef0a22d4eb0f6e8bdb98374"
+    },
+    {
+      "source": "Flow.Launcher/Themes/Darker.xaml",
+      "target": "Flow.Launcher/Themes/Darker.xaml",
+      "sha256": "6131eab8f600f8038450785b94239a17b569833999ac1dbb77fc8501a2addf0f"
+    },
+    {
+      "source": "Flow.Launcher/Themes/Discord Dark.xaml",
+      "target": "Flow.Launcher/Themes/Discord Dark.xaml",
+      "sha256": "4c6723aedba67518e4f306d86adb8e8b7994950266d572b8bd2b2579540cec85"
+    },
+    {
+      "source": "Flow.Launcher/Themes/Dracula.xaml",
+      "target": "Flow.Launcher/Themes/Dracula.xaml",
+      "sha256": "de62164af89c521d1734c08675cb0084e9202cda98861c900d2e19ad3604b4a7"
+    },
+    {
+      "source": "Flow.Launcher/Themes/Gray.xaml",
+      "target": "Flow.Launcher/Themes/Gray.xaml",
+      "sha256": "4f5dc0a00c48d181d1538c9b2ef637a22f830508ea6e167fe1219ec4f827d396"
+    },
+    {
+      "source": "Flow.Launcher/Themes/League.xaml",
+      "target": "Flow.Launcher/Themes/League.xaml",
+      "sha256": "c4f24a262adec8ee1f7bd2433036a0edb75549bdbc18166333f69fa79d166545"
+    },
+    {
+      "source": "Flow.Launcher/Themes/Midnight.xaml",
+      "target": "Flow.Launcher/Themes/Midnight.xaml",
+      "sha256": "9c72a3dab1d30750d166e66c155a478b07ead62168e2a66cd3d8cd81349e894d"
+    },
+    {
+      "source": "Flow.Launcher/Themes/Nord Darker.xaml",
+      "target": "Flow.Launcher/Themes/Nord Darker.xaml",
+      "sha256": "160c3d59328fb930620105b80d2631932e9453f44297c2fe6255633d5f2c3948"
+    },
+    {
+      "source": "Flow.Launcher/Themes/Pink.xaml",
+      "target": "Flow.Launcher/Themes/Pink.xaml",
+      "sha256": "2e822ae22311d5d9c7413d19afbb4e25e431a8289729aa90dcadd20ba42f6e0a"
+    },
+    {
+      "source": "Flow.Launcher/Themes/SlimLight.xaml",
+      "target": "Flow.Launcher/Themes/SlimLight.xaml",
+      "sha256": "5ce95ccad7f8e379a2cf495acef72f42f9cf843b77448a0f265786b2e42f6464"
+    },
+    {
+      "source": "Flow.Launcher/Themes/Sublime.xaml",
+      "target": "Flow.Launcher/Themes/Sublime.xaml",
+      "sha256": "92ebbfde83cd7b01279ca5697455eb4c5c2df7b1ce22c528995f124c56602c17"
+    },
+    {
+      "source": "Flow.Launcher/Themes/Ubuntu.xaml",
+      "target": "Flow.Launcher/Themes/Ubuntu.xaml",
+      "sha256": "e281fbd94aeebd10f06e54b9adfc3b381db150369c9ca2a95bc495bc4c58c076"
+    },
+    {
+      "source": "Flow.Launcher/Themes/Win10System.xaml",
+      "target": "Flow.Launcher/Themes/Win10System.xaml",
+      "sha256": "0428291c2ad1a99fbd0b7d84f8fc269c4b59af772931cf49ef41b414c8e6f8e1"
+    },
+    {
+      "source": "Flow.Launcher/Themes/Win11Light.xaml",
+      "target": "Flow.Launcher/Themes/Win11Light.xaml",
+      "sha256": "797178738a09c206817a25e0c6bf05f419c3a1889aca8f7e922a214d9fe1d030"
+    },
+    {
+      "source": "Flow.Launcher/ViewModel/MainViewModel.cs",
+      "target": "Flow.Launcher/ViewModel/MainViewModel.cs",
+      "sha256": "148571f80359cfba3da1cb05b7564e81fb9b79a7ce69356f004531d0cedf628b"
+    },
+    {
+      "source": "Flow.Launcher/ViewModel/PluginStoreItemViewModel.cs",
+      "target": "Flow.Launcher/ViewModel/PluginStoreItemViewModel.cs",
+      "sha256": "aebceae54519ca0cff90ecbe09555836665caf9bba35363edd010ac07a034593"
+    },
+    {
+      "source": "Flow.Launcher/ViewModel/PluginViewModel.cs",
+      "target": "Flow.Launcher/ViewModel/PluginViewModel.cs",
+      "sha256": "8b575f9888c9e7c6e54877ea18154c8bd55b4cfca5312c40144fd4f759071678"
+    },
+    {
+      "source": "Flow.Launcher/ViewModel/ResultPresentation.cs",
+      "target": "Flow.Launcher/ViewModel/ResultPresentation.cs",
+      "sha256": "aca8c51984a5cb14dc062f195bb5e73ff548b5ad2cb3e301e61a6246fca76191"
+    },
+    {
+      "source": "Flow.Launcher/ViewModel/ResultsForUpdate.cs",
+      "target": "Flow.Launcher/ViewModel/ResultsForUpdate.cs",
+      "sha256": "314a0892dd0f18be7256fea27394c46292a349f1850707ed3e311cdd5537dcd3"
+    },
+    {
+      "source": "Flow.Launcher/ViewModel/ResultsViewModel.cs",
+      "target": "Flow.Launcher/ViewModel/ResultsViewModel.cs",
+      "sha256": "a25e736be0e96a97b456b9d960a966212d916f7ffde323ff899d28630b6ff27f"
+    },
+    {
+      "source": "Flow.Launcher/ViewModel/ResultViewModel.cs",
+      "target": "Flow.Launcher/ViewModel/ResultViewModel.cs",
+      "sha256": "544efd5f1b02f3fd10b538834dd38a08bc3c640bc4194347da7ff7dc2145135c"
+    },
+    {
+      "source": "Flow.Launcher/ViewModel/SearchSourceOrder.cs",
+      "target": "Flow.Launcher/ViewModel/SearchSourceOrder.cs",
+      "sha256": "0a8af4442f3cee990faec07435f1eb9dad5644fe9ab04fbd307a3d8c44bf8f92"
+    },
+    {
+      "source": "Flow.Launcher/ViewModel/SelectBrowserViewModel.cs",
+      "target": "Flow.Launcher/ViewModel/SelectBrowserViewModel.cs",
+      "sha256": "a3ac8d9b3b0083987f43094ff011e843dd04386abe10092218e63271111d53cf"
+    },
+    {
+      "source": "Flow.Launcher/ViewModel/SelectFileManagerViewModel.cs",
+      "target": "Flow.Launcher/ViewModel/SelectFileManagerViewModel.cs",
+      "sha256": "ce169ef91b66c6e2458ca4a5319a3f41d78666453a30bcd66e49827abced748d"
+    },
+    {
+      "source": "Flow.Launcher/ViewModel/SettingWindowViewModel.cs",
+      "target": "Flow.Launcher/ViewModel/SettingWindowViewModel.cs",
+      "sha256": "a8e4539b372b5a4f939bf1620e5b46961510c378106cc8e3490e91029cbdd170"
+    },
+    {
+      "source": "Flow.Launcher/ViewModel/WelcomeViewModel.cs",
+      "target": "Flow.Launcher/ViewModel/WelcomeViewModel.cs",
+      "sha256": "089467c4a88de8397d8cd6d9e026880dc9fec22299f901d5908bdd3f59c0753a"
+    },
+    {
+      "source": "Flow.Launcher/Themes/ThemeBuilder/Template.xaml",
+      "target": "Flow.Launcher/Themes/ThemeBuilder/Template.xaml",
+      "sha256": "2233fd75a2a4699a588c09ee09744c7a5aabb56ecc265ff05739d47b6e75c447"
+    },
+    {
+      "source": "Flow.Launcher/Themes/ThemeBuilder/ThemeConvertor.py",
+      "target": "Flow.Launcher/Themes/ThemeBuilder/ThemeConvertor.py",
+      "sha256": "2446fbefbbbc2ffb698e47560370eb8493cc6d4e7e351ede560c9a2a4f904296"
+    },
+    {
+      "source": "Flow.Launcher/SettingPages/ViewModels/DropdownDataGeneric.cs",
+      "target": "Flow.Launcher/SettingPages/ViewModels/DropdownDataGeneric.cs",
+      "sha256": "0a160a356a1dc83bf673ce1d41b9dbb163ae76a126b12f71013cc141781d44d5"
+    },
+    {
+      "source": "Flow.Launcher/SettingPages/ViewModels/SettingsPaneAboutViewModel.cs",
+      "target": "Flow.Launcher/SettingPages/ViewModels/SettingsPaneAboutViewModel.cs",
+      "sha256": "30f682522ad76fa7036c2af7b0a302a8d578e4ae0994b40fc145355346528387"
+    },
+    {
+      "source": "Flow.Launcher/SettingPages/ViewModels/SettingsPaneGeneralViewModel.cs",
+      "target": "Flow.Launcher/SettingPages/ViewModels/SettingsPaneGeneralViewModel.cs",
+      "sha256": "510064ed1675111935948b5b3abb85a34e62f9313a00765ab2f317a9d51eae7b"
+    },
+    {
+      "source": "Flow.Launcher/SettingPages/ViewModels/SettingsPaneHotkeyViewModel.cs",
+      "target": "Flow.Launcher/SettingPages/ViewModels/SettingsPaneHotkeyViewModel.cs",
+      "sha256": "6fddd00a2d7c7005a55b303fd1d94537d0a405acfa39298a34fac7d2c0928f37"
+    },
+    {
+      "source": "Flow.Launcher/SettingPages/ViewModels/SettingsPanePluginStoreViewModel.cs",
+      "target": "Flow.Launcher/SettingPages/ViewModels/SettingsPanePluginStoreViewModel.cs",
+      "sha256": "8978415d2df99b6aa9cd7ed3ae2bf596ccf5dc249e4ab83c7e1d1cad0760c74e"
+    },
+    {
+      "source": "Flow.Launcher/SettingPages/ViewModels/SettingsPanePluginsViewModel.cs",
+      "target": "Flow.Launcher/SettingPages/ViewModels/SettingsPanePluginsViewModel.cs",
+      "sha256": "ad1d9fd5dcf50df63516a3d7200d3d80727e6d067acfee01aa3f71f5ec95c3fb"
+    },
+    {
+      "source": "Flow.Launcher/SettingPages/ViewModels/SettingsPaneProxyViewModel.cs",
+      "target": "Flow.Launcher/SettingPages/ViewModels/SettingsPaneProxyViewModel.cs",
+      "sha256": "d0b26f0110641995f9375e11756da3d30decf9db725fb9c980b529fe03e657b4"
+    },
+    {
+      "source": "Flow.Launcher/SettingPages/ViewModels/SettingsPaneThemeViewModel.cs",
+      "target": "Flow.Launcher/SettingPages/ViewModels/SettingsPaneThemeViewModel.cs",
+      "sha256": "0de61ab69d75f61e9f5234258d2d8cbe275177d5184761ea14c8d14f2200acc9"
+    },
+    {
+      "source": "Flow.Launcher/SettingPages/Views/SettingsPaneAbout.xaml",
+      "target": "Flow.Launcher/SettingPages/Views/SettingsPaneAbout.xaml",
+      "sha256": "7fc2f8708debcf17abbb975d8fa7e0a62abae240e20f7a86ae35e3b2e0015d7a"
+    },
+    {
+      "source": "Flow.Launcher/SettingPages/Views/SettingsPaneAbout.xaml.cs",
+      "target": "Flow.Launcher/SettingPages/Views/SettingsPaneAbout.xaml.cs",
+      "sha256": "87e3655701bb3eb7f375aaf407e4ae85153c65b5c00beff05ba89b8d6d338eb2"
+    },
+    {
+      "source": "Flow.Launcher/SettingPages/Views/SettingsPaneGeneral.xaml",
+      "target": "Flow.Launcher/SettingPages/Views/SettingsPaneGeneral.xaml",
+      "sha256": "b64939c2427cdb67f29f7e6ba957f94bd177ae7858028e8650c5e29f04e8fb2a"
+    },
+    {
+      "source": "Flow.Launcher/SettingPages/Views/SettingsPaneGeneral.xaml.cs",
+      "target": "Flow.Launcher/SettingPages/Views/SettingsPaneGeneral.xaml.cs",
+      "sha256": "051a5e6ebc67196d3ee790126c3c547917acaa1ddd1a7ee4d956e9f49b7ea86c"
+    },
+    {
+      "source": "Flow.Launcher/SettingPages/Views/SettingsPaneHotkey.xaml",
+      "target": "Flow.Launcher/SettingPages/Views/SettingsPaneHotkey.xaml",
+      "sha256": "133652aa73f90596f710540c33057c93fce5c038b09fe330a7bfaef40672ec59"
+    },
+    {
+      "source": "Flow.Launcher/SettingPages/Views/SettingsPaneHotkey.xaml.cs",
+      "target": "Flow.Launcher/SettingPages/Views/SettingsPaneHotkey.xaml.cs",
+      "sha256": "394d429b2c5ce73ae1d93f1ff498d62b252e20d20f7dd718427a619b3fdbdc66"
+    },
+    {
+      "source": "Flow.Launcher/SettingPages/Views/SettingsPanePlugins.xaml",
+      "target": "Flow.Launcher/SettingPages/Views/SettingsPanePlugins.xaml",
+      "sha256": "3beb3e5fbbaae58ea9e7d3e93381fd4117daba3294c62453ffd16f194e264193"
+    },
+    {
+      "source": "Flow.Launcher/SettingPages/Views/SettingsPanePlugins.xaml.cs",
+      "target": "Flow.Launcher/SettingPages/Views/SettingsPanePlugins.xaml.cs",
+      "sha256": "aae0d013341ceead1dab80b9c1ac09cb2a691e64a5cf3f1d29798c6574de9448"
+    },
+    {
+      "source": "Flow.Launcher/SettingPages/Views/SettingsPanePluginStore.xaml",
+      "target": "Flow.Launcher/SettingPages/Views/SettingsPanePluginStore.xaml",
+      "sha256": "80301f6d19eb7334c8ef36d42125c8d663755fd5f4ff0b93bc5a5333a7f81bb7"
+    },
+    {
+      "source": "Flow.Launcher/SettingPages/Views/SettingsPanePluginStore.xaml.cs",
+      "target": "Flow.Launcher/SettingPages/Views/SettingsPanePluginStore.xaml.cs",
+      "sha256": "db66f4e172dd5fa1e9a19fd54683b9f9cd3603d41b7934d511f3c747ccd34de6"
+    },
+    {
+      "source": "Flow.Launcher/SettingPages/Views/SettingsPaneProxy.xaml",
+      "target": "Flow.Launcher/SettingPages/Views/SettingsPaneProxy.xaml",
+      "sha256": "f0d8e2dae822ad066150ba93dea2807bb72bde3a7711bba82b9a43af5bc8b9cb"
+    },
+    {
+      "source": "Flow.Launcher/SettingPages/Views/SettingsPaneProxy.xaml.cs",
+      "target": "Flow.Launcher/SettingPages/Views/SettingsPaneProxy.xaml.cs",
+      "sha256": "b3e16d84071a0a29745ccada7bbedd433bb48981edb20974cb723ce9dca3b85d"
+    },
+    {
+      "source": "Flow.Launcher/SettingPages/Views/SettingsPaneTheme.xaml",
+      "target": "Flow.Launcher/SettingPages/Views/SettingsPaneTheme.xaml",
+      "sha256": "46e6e871137147d33a8e75feae4adc6baf6161fe8bed59578f2073a445e952ae"
+    },
+    {
+      "source": "Flow.Launcher/SettingPages/Views/SettingsPaneTheme.xaml.cs",
+      "target": "Flow.Launcher/SettingPages/Views/SettingsPaneTheme.xaml.cs",
+      "sha256": "abbfc3e9dfd359909a8967df34ae5e852165fe0c636e205a74dcfe7c9b3af182"
+    },
+    {
+      "source": "Flow.Launcher/Resources/Controls/CustomScrollViewerEx.cs",
+      "target": "Flow.Launcher/Resources/Controls/CustomScrollViewerEx.cs",
+      "sha256": "049cf199b6fa6a4eb5ee02c7fc537471b8b1273998219ab005de5733615b8c0b"
+    },
+    {
+      "source": "Flow.Launcher/Resources/Controls/HotkeyDisplay.xaml",
+      "target": "Flow.Launcher/Resources/Controls/HotkeyDisplay.xaml",
+      "sha256": "645ed144935268524ecacde61a4014ea8d567727e5a5ce277aa849984fd331e6"
+    },
+    {
+      "source": "Flow.Launcher/Resources/Controls/HotkeyDisplay.xaml.cs",
+      "target": "Flow.Launcher/Resources/Controls/HotkeyDisplay.xaml.cs",
+      "sha256": "1330783146e8ab7f03c8df91df88d8c8a28a5ebc116744d7de1c327cb9efa2c8"
+    },
+    {
+      "source": "Flow.Launcher/Resources/Controls/InstalledPluginDisplay.xaml",
+      "target": "Flow.Launcher/Resources/Controls/InstalledPluginDisplay.xaml",
+      "sha256": "657eec65725b6159ad8c042a23ad7837a46a9227cf6dac56b4a563ecb40af8ba"
+    },
+    {
+      "source": "Flow.Launcher/Resources/Controls/InstalledPluginDisplay.xaml.cs",
+      "target": "Flow.Launcher/Resources/Controls/InstalledPluginDisplay.xaml.cs",
+      "sha256": "3981511596bf79ce0b75c2c50ed1b5e13d39b754636bb784cbfd2c99daa1b8f0"
+    },
+    {
+      "source": "Flow.Launcher/Resources/Controls/InstalledPluginDisplayBottomData.xaml",
+      "target": "Flow.Launcher/Resources/Controls/InstalledPluginDisplayBottomData.xaml",
+      "sha256": "5a166b1522544d819a96166352605b738144735731a634806db9333eec224bb6"
+    },
+    {
+      "source": "Flow.Launcher/Resources/Controls/InstalledPluginDisplayBottomData.xaml.cs",
+      "target": "Flow.Launcher/Resources/Controls/InstalledPluginDisplayBottomData.xaml.cs",
+      "sha256": "ed83b74a8b54a8c0e953f53dbb5752dfc751476ca1e9aca079aedf61c2daa2cf"
+    },
+    {
+      "source": "Flow.Launcher/Resources/Controls/InstalledPluginDisplayKeyword.xaml",
+      "target": "Flow.Launcher/Resources/Controls/InstalledPluginDisplayKeyword.xaml",
+      "sha256": "a89b378d279cb5f81249e516e79321a03503a492198c01c55cacde07ba200e4f"
+    },
+    {
+      "source": "Flow.Launcher/Resources/Controls/InstalledPluginDisplayKeyword.xaml.cs",
+      "target": "Flow.Launcher/Resources/Controls/InstalledPluginDisplayKeyword.xaml.cs",
+      "sha256": "ebcb40e93bde1be476410a034df3f9b80136ecc7d44a5154aa8bb09db5baf282"
+    },
+    {
+      "source": "Flow.Launcher/Resources/MarkupExtensions/CollapsedWhenExtension.cs",
+      "target": "Flow.Launcher/Resources/MarkupExtensions/CollapsedWhenExtension.cs",
+      "sha256": "a72d1ad528a4393a32719ba670c058c33d94c0920218553800963a4b4acfd3eb"
+    },
+    {
+      "source": "Flow.Launcher/Resources/MarkupExtensions/HideableVisibilityConverter.cs",
+      "target": "Flow.Launcher/Resources/MarkupExtensions/HideableVisibilityConverter.cs",
+      "sha256": "6f9fc8b0975d57fa838d70154612f1010be59cf17fc886b372e8e9ac0ab925e0"
+    },
+    {
+      "source": "Flow.Launcher/Resources/MarkupExtensions/VisibleWhenExtension.cs",
+      "target": "Flow.Launcher/Resources/MarkupExtensions/VisibleWhenExtension.cs",
+      "sha256": "be60c778c657abfba9ff61308a35bfd66feb5db493d7252411f352830aa7d3af"
+    },
+    {
+      "source": "Flow.Launcher/Resources/Pages/WelcomePage1.xaml",
+      "target": "Flow.Launcher/Resources/Pages/WelcomePage1.xaml",
+      "sha256": "e92a0c5d30991fbb8190e7930ea83fe965386f442fe25ade68f38206e1850093"
+    },
+    {
+      "source": "Flow.Launcher/Resources/Pages/WelcomePage1.xaml.cs",
+      "target": "Flow.Launcher/Resources/Pages/WelcomePage1.xaml.cs",
+      "sha256": "4fb998b9cace015cea69da5b1e4670be6a1b7ba289c167b8462e9cddf27fa6fa"
+    },
+    {
+      "source": "Flow.Launcher/Resources/Pages/WelcomePage2.xaml",
+      "target": "Flow.Launcher/Resources/Pages/WelcomePage2.xaml",
+      "sha256": "60f7232f262217ff633a3422d61f709d7e11ae6a47cbf87ad92b34dae601e4a6"
+    },
+    {
+      "source": "Flow.Launcher/Resources/Pages/WelcomePage2.xaml.cs",
+      "target": "Flow.Launcher/Resources/Pages/WelcomePage2.xaml.cs",
+      "sha256": "040a8bf7ac08f84fc9c7d90538bb24c82fca56feb801f298a78544a9d55601a5"
+    },
+    {
+      "source": "Flow.Launcher/Resources/Pages/WelcomePage3.xaml",
+      "target": "Flow.Launcher/Resources/Pages/WelcomePage3.xaml",
+      "sha256": "d99253c0a8e7bf3c69c04d1af2eadf83b10ec0e449b4a2c15d76bc888b6f602d"
+    },
+    {
+      "source": "Flow.Launcher/Resources/Pages/WelcomePage3.xaml.cs",
+      "target": "Flow.Launcher/Resources/Pages/WelcomePage3.xaml.cs",
+      "sha256": "cf2d296e6dd36b32a195377941e2afa1feb07efd84b532aaf6fd0692194d3309"
+    },
+    {
+      "source": "Flow.Launcher/Resources/Pages/WelcomePage4.xaml",
+      "target": "Flow.Launcher/Resources/Pages/WelcomePage4.xaml",
+      "sha256": "b278c17298cef2994b59763de7e977be24feead95553bf98978cfadf66f13ed0"
+    },
+    {
+      "source": "Flow.Launcher/Resources/Pages/WelcomePage4.xaml.cs",
+      "target": "Flow.Launcher/Resources/Pages/WelcomePage4.xaml.cs",
+      "sha256": "b792b33685fa09cf60227ed1a441dc06e427b75c14016e3978a8a974f45f1ae4"
+    },
+    {
+      "source": "Flow.Launcher/Resources/Pages/WelcomePage5.xaml",
+      "target": "Flow.Launcher/Resources/Pages/WelcomePage5.xaml",
+      "sha256": "9a99d618aa7d34fb70d0d7fab99a34eda63d3b937938289f2d68bbb85bb4d4cd"
+    },
+    {
+      "source": "Flow.Launcher/Resources/Pages/WelcomePage5.xaml.cs",
+      "target": "Flow.Launcher/Resources/Pages/WelcomePage5.xaml.cs",
+      "sha256": "f58101b336c6f76cc685a65d19a11ec4596b93e246696821df5a030d1bb953f1"
+    },
+    {
+      "source": "Flow.Launcher/Properties/PublishProfiles/Net9.0-SelfContained.pubxml",
+      "target": "Flow.Launcher/Properties/PublishProfiles/Net9.0-SelfContained.pubxml",
+      "sha256": "0abd58ca83ab903e03a29a7ff16e898cb3300168bbc955fc10fba6585f000afc"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/ChromeBookmarkLoader.cs",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/ChromeBookmarkLoader.cs",
+      "sha256": "dc4ceb877512a02d725e46c964a9827433b96aa5de2b6df63b3150074bd2cb0b"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/ChromiumBookmarkLoader.cs",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/ChromiumBookmarkLoader.cs",
+      "sha256": "881b367c21225549ee365158be44cea008f938c8028ba6096d49cf556d5ab658"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/CustomChromiumBookmarkLoader.cs",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/CustomChromiumBookmarkLoader.cs",
+      "sha256": "91eeb4b7f1c2256932a929b9c1ef237b024ce3b914a01adf26eacb2e68cf0545"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/CustomFirefoxBookmarkLoader.cs",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/CustomFirefoxBookmarkLoader.cs",
+      "sha256": "e8f20f98f263000c2cb5c350820c1988d8fcfbecf8f0dd03b6944c3aab52aeec"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/EdgeBookmarkLoader.cs",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/EdgeBookmarkLoader.cs",
+      "sha256": "83fbf5cdb09906982c720d8b5898eb595f1bb9f520316684da9c5206efd79755"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/FirefoxBookmarkLoader.cs",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/FirefoxBookmarkLoader.cs",
+      "sha256": "6450d76a596c7192d957c24d91a22069e81409936544a9764de6a9d33ba8531c"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/Flow.Launcher.Plugin.BrowserBookmark.csproj",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Flow.Launcher.Plugin.BrowserBookmark.csproj",
+      "sha256": "4813087d208c915b942d2076b4e85a813a8e8b7f0f2166216424f39fa5eae869"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/IBookmarkLoader.cs",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/IBookmarkLoader.cs",
+      "sha256": "36b21860767167825040bef7ab42c862c990587f879a4bda142db10ff4f344fe"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/Main.cs",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Main.cs",
+      "sha256": "a155779a3dbbb4c04f73b59aec234a9cacb5c75bf24016c0dfe222e2e8b2a646"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/plugin.json",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/plugin.json",
+      "sha256": "9558c00094766b855bf3dafcaa068b93b5c9d640b1b8e645747c52a69b6b65cd"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/Commands/BookmarkLoader.cs",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Commands/BookmarkLoader.cs",
+      "sha256": "f87bf22feb5f85310c2f75a609f4665f8c639c576e361762ebc3c99e92303e69"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/Helper/FaviconHelper.cs",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Helper/FaviconHelper.cs",
+      "sha256": "f2cd7df1f4f778d4200f7bcc34eb6dfe3f779bf7cf8c8e7e8fb4deea01c6f6f8"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/Images/bookmark.png",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Images/bookmark.png",
+      "sha256": "0447a09621bad39d6d2bec447616acfd36f652eb5caf1d22e6d458172060055d"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/Images/copylink.png",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Images/copylink.png",
+      "sha256": "02b1f5a5d47304e3a9af8359f79ac1849962807299d23effff848c786d9ad9e3"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/Languages/ar.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/ar.xaml",
+      "sha256": "8f73ba33bddd94e462f7044841021cd59caeaaf69a7f2b5e64134f17f4ab7dcf"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/Languages/cs.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/cs.xaml",
+      "sha256": "171ba085067110fbf6d84d0f2c5a5994c86902af627a34660cd0fa650e063948"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/Languages/da.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/da.xaml",
+      "sha256": "02a67fb12a8bf90fefd60bd35faf0520d951c12126f42bdff3df79de33603926"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/Languages/de.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/de.xaml",
+      "sha256": "39435e07ccd8a29a27aad7fd3aa7e5dbda20f58292a6d408ccdeda5f40a979f7"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/Languages/en.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/en.xaml",
+      "sha256": "d494b9c06851564eac8705112cc71c724116a29ab868d6a6dddcce1157d7088b"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/Languages/es-419.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/es-419.xaml",
+      "sha256": "3b929f7a2b96bfd93ade2a51803d6af83ab839e946c48d246b6055fecfbdd258"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/Languages/es.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/es.xaml",
+      "sha256": "4610eb988a0c448ea09cc3472dee01bb480f9e7c501c031073f9cd76b75771f1"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/Languages/fr.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/fr.xaml",
+      "sha256": "8522f0cdbc18748f70dd007eca870f71fcd559f8092beb1d8a08e3dfa96a2303"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/Languages/he.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/he.xaml",
+      "sha256": "ffbe41b75eaaac94c93218423a99dc83b18e7fb557b64c6aba264dc3946f78f1"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/Languages/it.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/it.xaml",
+      "sha256": "ed55f8a159244c5d9018977fab787762f2bcc98ccae5d049d5f71b5f086e1a5c"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/Languages/ja.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/ja.xaml",
+      "sha256": "5bc8801c62214b2a30d86f20f5be01a4e5242d4470418e82004b8ec22d655a3d"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/Languages/ko.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/ko.xaml",
+      "sha256": "f128d7f2ddf89db4f8fc4ef1738957d8f85327ce488229cbb4b66f48adbc046c"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/Languages/nb.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/nb.xaml",
+      "sha256": "e47bfa85b651805d1e8bf07c970554f423dccda7dfa5b9dcaed9bd6b61c095bc"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/Languages/nl.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/nl.xaml",
+      "sha256": "1c6b0475470e3d9bdcec3e4dac585ff1a822f18b57d78e4ec28b082093198e16"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/Languages/pl.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/pl.xaml",
+      "sha256": "a69cf7b0bc61ac5f54488a200ea09d4a3df0514aaf2bd65ad755884c6a694e23"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/Languages/pt-br.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/pt-br.xaml",
+      "sha256": "5b179334edfec19df5e2d27be9462cd7521861dfd8cb67938f3a3d2f694453ec"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/Languages/pt-pt.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/pt-pt.xaml",
+      "sha256": "e5f5c6b6b88deb8156c6f925a84890e610e9685b72c2bfe0db568752902f2073"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/Languages/ru.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/ru.xaml",
+      "sha256": "c448fb3ef502bc748ad8a747f08613af8fbcdfa5c9aaea2e0cb662cc48136fcc"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/Languages/sk.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/sk.xaml",
+      "sha256": "6273459281c1e2004c1d61956295d37502eb872b2decb055580162ff8a70e7be"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/Languages/sr-Cyrl-RS.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/sr-Cyrl-RS.xaml",
+      "sha256": "10fc99504c836d66adee1705f81f419cc69746b395c60d2a6b0132e3c1b15643"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/Languages/sr.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/sr.xaml",
+      "sha256": "3094015a9423f44a8468a4d9fca9e997cb78b771d8df3116173714546f01b6f5"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/Languages/tr.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/tr.xaml",
+      "sha256": "640ab09eebdb4e7c741b95d6402e172dbd95383b6f0916b85c9e689d6ce1e180"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/Languages/uk-UA.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/uk-UA.xaml",
+      "sha256": "f23f5daf11dc39ae510a55e73f497baa12d55d9874cb8f83cfa0960f99c44c37"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/Languages/vi.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/vi.xaml",
+      "sha256": "72e9bf6d11a2465d558b350376ace91cfa96c4add9a42eebe4a640e0a02f07ea"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/Languages/zh-cn.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/zh-cn.xaml",
+      "sha256": "a71d393bfb051b10cbdad0336256d31bf4647532616987364b0eb8d31fdb44c7"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/Languages/zh-tw.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/zh-tw.xaml",
+      "sha256": "eeeaa8fea821f9c12aa851f5350505eebb685b8f12fbfd553d1c6691298f7c0e"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/Models/Bookmark.cs",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Models/Bookmark.cs",
+      "sha256": "b2a3cd1beb98e6931cf3c0c02a73a8c78a901ae582f2a807368393f2289fc525"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/Models/CustomBrowser.cs",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Models/CustomBrowser.cs",
+      "sha256": "1e9dacbf3298d74d541ca0721504e1e77e58acaf28fb98fef07fca75f23ad06c"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/Models/Settings.cs",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Models/Settings.cs",
+      "sha256": "9d84c6c5fabeed5bad4282e2d01e06ca37f322be9809b76f0d1217b7adeca321"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/Views/CustomBrowserSetting.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Views/CustomBrowserSetting.xaml",
+      "sha256": "7bff6fad889a980932e2c8224d7511bced4fef599e1ecc46494d7a607644ebeb"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/Views/CustomBrowserSetting.xaml.cs",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Views/CustomBrowserSetting.xaml.cs",
+      "sha256": "d20c9c7715003af9a31d4d9832d948dd60d397eb02f3315100bc88fe9e7df7a4"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/Views/SettingsControl.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Views/SettingsControl.xaml",
+      "sha256": "3f5863a862e0b9d8a3c0d19ee4bb31faacb772f6495409d573da0dd5120fa3df"
+    },
+    {
+      "source": "Flow.Launcher.Plugin.BrowserBookmark/Views/SettingsControl.xaml.cs",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Views/SettingsControl.xaml.cs",
+      "sha256": "d92aea5d02a7519a8744843167afaae4f3c59dd5a3e701cfbdc47c4d27fc5cd5"
+    },
+    {
+      "source": "bookmark/ChromeBookmarkLoader.cs",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/ChromeBookmarkLoader.cs",
+      "sha256": "07cfdc3c52f61dfe9e372bfa4fb414b8141ad5b5dd0ad4bb4fc3cf865c5365c8"
+    },
+    {
+      "source": "bookmark/ChromiumBookmarkLoader.cs",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/ChromiumBookmarkLoader.cs",
+      "sha256": "b6082ad0d5830be9167aa1cb95cb76dd38ae9a616d3d210e3610b6c35f35e217"
+    },
+    {
+      "source": "bookmark/CustomChromiumBookmarkLoader.cs",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/CustomChromiumBookmarkLoader.cs",
+      "sha256": "c632788bbb01a238a021a28a98965c0e43b889e184c602cf38c8367f1523a422"
+    },
+    {
+      "source": "bookmark/CustomFirefoxBookmarkLoader.cs",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/CustomFirefoxBookmarkLoader.cs",
+      "sha256": "c889532f98e3d1bd8b2249d32e1b5a622901a9ba4c9befa080c55c4df48145c0"
+    },
+    {
+      "source": "bookmark/EdgeBookmarkLoader.cs",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/EdgeBookmarkLoader.cs",
+      "sha256": "c00c0b9665c97842cbc02539c7b891b45b1f4a383462471cf8fad6075e38d9ea"
+    },
+    {
+      "source": "bookmark/FirefoxBookmarkLoader.cs",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/FirefoxBookmarkLoader.cs",
+      "sha256": "bb5bb58b52bc17c4529473668a2cfc1380d4ae429ceb2fe2e48b55a8f4b7cccf"
+    },
+    {
+      "source": "bookmark/IBookmarkLoader.cs",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/IBookmarkLoader.cs",
+      "sha256": "c0fdd7742379306a1b8f91b3a84dd4f7fb5038e21335d36b85db33a80076937a"
+    },
+    {
+      "source": "bookmark/Main.cs",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Main.cs",
+      "sha256": "ffdb658f429e34ae7cac3810123c3ffa730557b04ec662ac7626c282d1c3d343"
+    },
+    {
+      "source": "bookmark/Commands/BookmarkLoader.cs",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Commands/BookmarkLoader.cs",
+      "sha256": "0ced25e0126e93be4f3330277a8eccf1a915f7438234591d50fb7766132ddfef"
+    },
+    {
+      "source": "bookmark/Helper/FaviconHelper.cs",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Helper/FaviconHelper.cs",
+      "sha256": "c2780c1dec5edfb73038a2f7fbb8daaf7bfbc828b40b49f051628987b4272616"
+    },
+    {
+      "source": "bookmark/Images/bookmark.png",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Images/bookmark.png",
+      "sha256": "0447a09621bad39d6d2bec447616acfd36f652eb5caf1d22e6d458172060055d"
+    },
+    {
+      "source": "bookmark/Images/copylink.png",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Images/copylink.png",
+      "sha256": "02b1f5a5d47304e3a9af8359f79ac1849962807299d23effff848c786d9ad9e3"
+    },
+    {
+      "source": "bookmark/Languages/ar.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/ar.xaml",
+      "sha256": "8f73ba33bddd94e462f7044841021cd59caeaaf69a7f2b5e64134f17f4ab7dcf"
+    },
+    {
+      "source": "bookmark/Languages/cs.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/cs.xaml",
+      "sha256": "171ba085067110fbf6d84d0f2c5a5994c86902af627a34660cd0fa650e063948"
+    },
+    {
+      "source": "bookmark/Languages/da.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/da.xaml",
+      "sha256": "02a67fb12a8bf90fefd60bd35faf0520d951c12126f42bdff3df79de33603926"
+    },
+    {
+      "source": "bookmark/Languages/de.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/de.xaml",
+      "sha256": "39435e07ccd8a29a27aad7fd3aa7e5dbda20f58292a6d408ccdeda5f40a979f7"
+    },
+    {
+      "source": "bookmark/Languages/en.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/en.xaml",
+      "sha256": "822f9bf739ed648d91dc74a0a21830369cb4634b2c1f851fe1460c3d7c81a86f"
+    },
+    {
+      "source": "bookmark/Languages/es-419.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/es-419.xaml",
+      "sha256": "3b929f7a2b96bfd93ade2a51803d6af83ab839e946c48d246b6055fecfbdd258"
+    },
+    {
+      "source": "bookmark/Languages/es.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/es.xaml",
+      "sha256": "4610eb988a0c448ea09cc3472dee01bb480f9e7c501c031073f9cd76b75771f1"
+    },
+    {
+      "source": "bookmark/Languages/fr.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/fr.xaml",
+      "sha256": "8522f0cdbc18748f70dd007eca870f71fcd559f8092beb1d8a08e3dfa96a2303"
+    },
+    {
+      "source": "bookmark/Languages/he.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/he.xaml",
+      "sha256": "ffbe41b75eaaac94c93218423a99dc83b18e7fb557b64c6aba264dc3946f78f1"
+    },
+    {
+      "source": "bookmark/Languages/it.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/it.xaml",
+      "sha256": "ed55f8a159244c5d9018977fab787762f2bcc98ccae5d049d5f71b5f086e1a5c"
+    },
+    {
+      "source": "bookmark/Languages/ja.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/ja.xaml",
+      "sha256": "5bc8801c62214b2a30d86f20f5be01a4e5242d4470418e82004b8ec22d655a3d"
+    },
+    {
+      "source": "bookmark/Languages/ko.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/ko.xaml",
+      "sha256": "f128d7f2ddf89db4f8fc4ef1738957d8f85327ce488229cbb4b66f48adbc046c"
+    },
+    {
+      "source": "bookmark/Languages/nb.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/nb.xaml",
+      "sha256": "e47bfa85b651805d1e8bf07c970554f423dccda7dfa5b9dcaed9bd6b61c095bc"
+    },
+    {
+      "source": "bookmark/Languages/nl.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/nl.xaml",
+      "sha256": "1c6b0475470e3d9bdcec3e4dac585ff1a822f18b57d78e4ec28b082093198e16"
+    },
+    {
+      "source": "bookmark/Languages/pl.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/pl.xaml",
+      "sha256": "a69cf7b0bc61ac5f54488a200ea09d4a3df0514aaf2bd65ad755884c6a694e23"
+    },
+    {
+      "source": "bookmark/Languages/pt-br.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/pt-br.xaml",
+      "sha256": "5b179334edfec19df5e2d27be9462cd7521861dfd8cb67938f3a3d2f694453ec"
+    },
+    {
+      "source": "bookmark/Languages/pt-pt.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/pt-pt.xaml",
+      "sha256": "e5f5c6b6b88deb8156c6f925a84890e610e9685b72c2bfe0db568752902f2073"
+    },
+    {
+      "source": "bookmark/Languages/ru.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/ru.xaml",
+      "sha256": "c448fb3ef502bc748ad8a747f08613af8fbcdfa5c9aaea2e0cb662cc48136fcc"
+    },
+    {
+      "source": "bookmark/Languages/sk.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/sk.xaml",
+      "sha256": "6273459281c1e2004c1d61956295d37502eb872b2decb055580162ff8a70e7be"
+    },
+    {
+      "source": "bookmark/Languages/sr-Cyrl-RS.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/sr-Cyrl-RS.xaml",
+      "sha256": "10fc99504c836d66adee1705f81f419cc69746b395c60d2a6b0132e3c1b15643"
+    },
+    {
+      "source": "bookmark/Languages/sr.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/sr.xaml",
+      "sha256": "3094015a9423f44a8468a4d9fca9e997cb78b771d8df3116173714546f01b6f5"
+    },
+    {
+      "source": "bookmark/Languages/tr.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/tr.xaml",
+      "sha256": "640ab09eebdb4e7c741b95d6402e172dbd95383b6f0916b85c9e689d6ce1e180"
+    },
+    {
+      "source": "bookmark/Languages/uk-UA.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/uk-UA.xaml",
+      "sha256": "f23f5daf11dc39ae510a55e73f497baa12d55d9874cb8f83cfa0960f99c44c37"
+    },
+    {
+      "source": "bookmark/Languages/vi.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/vi.xaml",
+      "sha256": "72e9bf6d11a2465d558b350376ace91cfa96c4add9a42eebe4a640e0a02f07ea"
+    },
+    {
+      "source": "bookmark/Languages/zh-cn.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/zh-cn.xaml",
+      "sha256": "a71d393bfb051b10cbdad0336256d31bf4647532616987364b0eb8d31fdb44c7"
+    },
+    {
+      "source": "bookmark/Languages/zh-tw.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Languages/zh-tw.xaml",
+      "sha256": "eeeaa8fea821f9c12aa851f5350505eebb685b8f12fbfd553d1c6691298f7c0e"
+    },
+    {
+      "source": "bookmark/Models/Bookmark.cs",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Models/Bookmark.cs",
+      "sha256": "c11b70c439e7da9426d1254b2fbf055159c7354d474658ea36e9f7b91b1e8041"
+    },
+    {
+      "source": "bookmark/Models/BookmarkTagStore.cs",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Models/BookmarkTagStore.cs",
+      "sha256": "679e22ae99643e99ff5ec888da3462d0d55560da49baa7655e5ecbb35a2a9dfc"
+    },
+    {
+      "source": "bookmark/Models/CustomBrowser.cs",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Models/CustomBrowser.cs",
+      "sha256": "f465e8ab739eb0eaf7aa22a06e56ea0fe3d7dbb162a0458f78add5080bebcaf2"
+    },
+    {
+      "source": "bookmark/Models/Settings.cs",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Models/Settings.cs",
+      "sha256": "9b39b5334f1757f94fb33165f0833032eb8475f1d8f067a2beba49ec4ee0cb28"
+    },
+    {
+      "source": "bookmark/Views/BookmarkTagsWindow.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Views/BookmarkTagsWindow.xaml",
+      "sha256": "5c41a6d2b086d1c6091d9116439e27134ea41fa29aa0614e6fc61dc84e68d44e"
+    },
+    {
+      "source": "bookmark/Views/BookmarkTagsWindow.xaml.cs",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Views/BookmarkTagsWindow.xaml.cs",
+      "sha256": "8a534e0fa7498283be6c9ebdb40f7d3164b5328c181f2a017adc2d4264e26b25"
+    },
+    {
+      "source": "bookmark/Views/CustomBrowserSetting.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Views/CustomBrowserSetting.xaml",
+      "sha256": "f9abb4f0d0c821770365c897ca13f78b21c52c1b0f5986bfc3f14b6c2f022f0d"
+    },
+    {
+      "source": "bookmark/Views/CustomBrowserSetting.xaml.cs",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Views/CustomBrowserSetting.xaml.cs",
+      "sha256": "219dc3398fe08d45cbfd0fe233544000e26dbe5b6dbc44fb8c9763b52874e778"
+    },
+    {
+      "source": "bookmark/Views/SettingsControl.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Views/SettingsControl.xaml",
+      "sha256": "fc2184a67c3a7f5e9f4a0186aaf22904d2bf62d0b686a81b55d0916bcdb99934"
+    },
+    {
+      "source": "bookmark/Views/SettingsControl.xaml.cs",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.PersonalBookmarks/Views/SettingsControl.xaml.cs",
+      "sha256": "46f04d75b4915f814f9db3adf888d198f910fcb70e1b2e256033b6796d6bc789"
+    },
+    {
+      "source": "content/Main.cs",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.NoteContent/Main.cs",
+      "sha256": "43e46e2e31e606098841ea304cb60e79be382f98e51d781bfbb334eb58ef8e6a"
+    },
+    {
+      "source": "content/SettingsControl.xaml",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.NoteContent/SettingsControl.xaml",
+      "sha256": "ede5805180bef94f32cf1bc25f120eb438ebe10fb539f5dd96c6e7e13ad3e3d3"
+    },
+    {
+      "source": "content/SettingsControl.xaml.cs",
+      "target": "PersonalPlugins/Flow.Launcher.Plugin.NoteContent/SettingsControl.xaml.cs",
+      "sha256": "abb0a76a52ec5142d16620d4c1f0c5257863170ff911eede098c460319c5bfdf"
+    }
+  ]
+}

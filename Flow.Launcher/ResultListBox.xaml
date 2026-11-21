@@ -61,11 +61,12 @@
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Style="{DynamicResource ImageAreaWidth}" />
                             <ColumnDefinition Width="9*" />
+                            <ColumnDefinition Width="Auto" />
                             <ColumnDefinition Width="Auto" MinWidth="8" />
                         </Grid.ColumnDefinitions>
                         <StackPanel
                             x:Name="HotkeyArea"
-                            Grid.Column="2"
+                            Grid.Column="3"
                             Margin="0 0 10 0"
                             VerticalAlignment="Center"
                             Visibility="{Binding Settings.ShowOpenResultHotkey, Mode=OneWay, Converter={StaticResource BoolToVisibilityConverter}}">
@@ -88,6 +89,23 @@
                                 </TextBlock>
                             </Border>
                         </StackPanel>
+
+                        <Border
+                            x:Name="SourceTag"
+                            Grid.Column="2"
+                            Margin="4 0 8 0"
+                            VerticalAlignment="Center"
+                            IsHitTestVisible="False"
+                            Style="{DynamicResource ItemHotkeyBGStyle}">
+                            <TextBlock
+                                x:Name="SourceLabel"
+                                Margin="0"
+                                VerticalAlignment="Center"
+                                FontSize="12"
+                                FontWeight="SemiBold"
+                                Style="{DynamicResource ItemTitleStyle}"
+                                Text="{Binding MatchSourceLabel}" />
+                        </Border>
 
                         <Grid Grid.Column="0">
                             <Grid.ColumnDefinitions>
@@ -218,9 +236,14 @@
                     <Setter TargetName="Bullet" Property="Style" Value="{DynamicResource ItemBulletSelectedStyle}" />
                     <Setter TargetName="Title" Property="Style" Value="{DynamicResource ItemTitleSelectedStyle}" />
                     <Setter TargetName="SubTitle" Property="Style" Value="{DynamicResource ItemSubTitleSelectedStyle}" />
+                    <Setter TargetName="SourceLabel" Property="Style" Value="{DynamicResource ItemTitleSelectedStyle}" />
+                    <Setter TargetName="SourceTag" Property="Style" Value="{DynamicResource ItemHotkeyBGSelectedStyle}" />
                     <Setter TargetName="Hotkey" Property="Style" Value="{DynamicResource ItemHotkeySelectedStyle}" />
                     <Setter TargetName="HotkeyBG" Property="Style" Value="{DynamicResource ItemHotkeyBGSelectedStyle}" />
                     <Setter TargetName="GlyphIcon" Property="Style" Value="{DynamicResource ItemGlyphSelectedStyle}" />
+                </DataTrigger>
+                <DataTrigger Binding="{Binding MatchSourceLabel}" Value="">
+                    <Setter TargetName="SourceTag" Property="Visibility" Value="Collapsed" />
                 </DataTrigger>
             </DataTemplate.Triggers>
         </DataTemplate>

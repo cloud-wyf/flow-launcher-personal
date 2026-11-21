@@ -272,6 +272,7 @@ namespace Flow.Launcher
                     API.SaveAppAllSettings();
 
                     API.LogInfo(ClassName, "End plugin initialization ------------------------------------------------------");
+                    Helper.SettingsWindowHost.PreloadWhenIdle();
                 });
             });
         }

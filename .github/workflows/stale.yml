@@ -13,6 +13,7 @@ env:
 
 jobs:
   stale:
+    if: github.repository == 'Flow-Launcher/Flow.Launcher'
     runs-on: ubuntu-latest
     permissions:
       issues: write

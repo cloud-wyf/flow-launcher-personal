@@ -61,7 +61,7 @@ public partial class SettingsPaneGeneralViewModel : BaseModel
                 else
                 {
                     AutoStartup.DisableViaLogonTaskAndRegistry();
-                }  
+                }
             }
             catch (Exception e)
             {
@@ -94,7 +94,7 @@ public partial class SettingsPaneGeneralViewModel : BaseModel
                 {
                     App.API.ShowMsgError(Localize.setAutoStartFailed(), e.Message);
                 }
-            } 
+            }
         }
     }
 
@@ -207,7 +207,7 @@ public partial class SettingsPaneGeneralViewModel : BaseModel
         }
     }
 
-    private void UpdateEnumDropdownLocalizations()
+    internal void UpdateEnumDropdownLocalizations()
     {
         DropdownDataGeneric<SearchWindowScreens>.UpdateLabels(SearchWindowScreens);
         DropdownDataGeneric<SearchWindowAligns>.UpdateLabels(SearchWindowAligns);

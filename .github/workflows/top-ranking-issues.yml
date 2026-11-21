@@ -6,10 +6,11 @@ on:
 
 jobs:
   ShowAndLabelTopIssues:
+    if: github.repository == 'Flow-Launcher/Flow.Launcher'
     name: Display and label top issues.
     runs-on: ubuntu-latest
     steps:
-      - name: Top Issues action              
+      - name: Top Issues action
         uses: rickstaa/top-issues-action@v1.3.101
         env:
           github_token: ${{ secrets.GITHUB_TOKEN }}

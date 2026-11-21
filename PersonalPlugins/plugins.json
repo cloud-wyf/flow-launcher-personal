@@ -1,0 +1,19 @@
+{
+  "repository": "cloud-wyf/flow-launcher-personal",
+  "plugins": [
+    {
+      "id": "948d4e4b11de51519ea9ff8a4bb8b4e4",
+      "name": "个人收藏夹",
+      "assembly": "Flow.Launcher.Plugin.PersonalBookmarks",
+      "version": "1.0.0",
+      "replaces": "0ECADE17459B49F587BF81DC3A125110",
+      "legacyAssembly": "Flow.Launcher.Plugin.BrowserBookmark"
+    },
+    {
+      "id": "c307b936798d447a9218ed8987fa2734",
+      "name": "笔记内容搜索",
+      "assembly": "Flow.Launcher.Plugin.NoteContent",
+      "version": "1.1.0"
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -29,13 +30,11 @@ namespace Flow.Launcher.ViewModel
             init
             {
                 _pluginPair = value;
-                value.Metadata.PropertyChanged += (_, args) =>
-                {
-                    if (args.PropertyName == nameof(PluginPair.Metadata.AvgQueryTime))
-                        OnPropertyChanged(nameof(QueryTime));
-                };
+                PropertyChangedEventManager.AddHandler(value.Metadata, Metadata_PropertyChanged, nameof(PluginPair.Metadata.AvgQueryTime));
             }
         }
+
+        private void Metadata_PropertyChanged(object sender, PropertyChangedEventArgs args) => OnPropertyChanged(nameof(QueryTime));
 
         private async Task LoadIconAsync()
         {

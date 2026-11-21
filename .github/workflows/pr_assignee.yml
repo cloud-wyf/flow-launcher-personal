@@ -11,6 +11,7 @@ permissions:
 
 jobs:
   automation:
+    if: github.repository == 'Flow-Launcher/Flow.Launcher'
     runs-on: ubuntu-latest
     steps:
     - name: Assign PR to creator

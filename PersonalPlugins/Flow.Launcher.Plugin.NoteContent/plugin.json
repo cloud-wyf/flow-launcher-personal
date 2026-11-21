@@ -1,0 +1,15 @@
+{
+  "ID": "c307b936798d447a9218ed8987fa2734",
+  "ActionKeywords": [
+    "内容"
+  ],
+  "Name": "笔记内容搜索",
+  "Description": "直接搜索本地 Markdown 和纯文本正文，回车打开文件",
+  "Author": "cloud-wyf",
+  "Version": "1.1.0",
+  "Language": "csharp",
+  "ExecuteFileName": "Flow.Launcher.Plugin.NoteContent.dll",
+  "IcoPath": "icon.png",
+  "SearchDelayTime": 100,
+  "Website": "https://github.com/cloud-wyf/flow-launcher-personal"
+}

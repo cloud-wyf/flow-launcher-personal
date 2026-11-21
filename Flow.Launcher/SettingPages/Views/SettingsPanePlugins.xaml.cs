@@ -1,4 +1,4 @@
-﻿using System.ComponentModel;
+using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -10,28 +10,50 @@ using Flow.Launcher.ViewModel;
 
 namespace Flow.Launcher.SettingPages.Views;
 
-public partial class SettingsPanePlugins
+public partial class SettingsPanePlugins : IPreloadableSettingsPage
 {
     private SettingsPanePluginsViewModel _viewModel = null!;
     private readonly SettingWindowViewModel _settingViewModel = Ioc.Default.GetRequiredService<SettingWindowViewModel>();
 
+    void IPreloadableSettingsPage.PrepareViewModel()
+    {
+        if (_viewModel != null) return;
+        _viewModel = Ioc.Default.GetRequiredService<SettingsPanePluginsViewModel>();
+        DataContext = _viewModel;
+    }
+
+    void IPreloadableSettingsPage.PrepareView()
+    {
+        if (!IsInitialized) InitializeComponent();
+    }
+
+    void IPreloadableSettingsPage.Activate()
+    {
+        _settingViewModel.PageType = typeof(SettingsPanePlugins);
+        _viewModel.PropertyChanged -= ViewModel_PropertyChanged;
+        _viewModel.PropertyChanged += ViewModel_PropertyChanged;
+    }
+
+    void IPreloadableSettingsPage.Deactivate()
+    {
+        _viewModel.PropertyChanged -= ViewModel_PropertyChanged;
+    }
+
+    void IPreloadableSettingsPage.RefreshData()
+    {
+        _viewModel.RefreshNavigationData();
+    }
+
     protected override void OnNavigatedTo(NavigationEventArgs e)
     {
-        // Sometimes the navigation is not triggered by button click,
-        // so we need to reset the page type
-        _settingViewModel.PageType = typeof(SettingsPanePlugins);
-
-        // If the navigation is not triggered by button click, view model will be null again
-        if (_viewModel == null)
+        var page = (IPreloadableSettingsPage)this;
+        page.PrepareViewModel();
+        page.PrepareView();
+        if (!ReferenceEquals(e.ExtraData, SettingsPageWarmup.Marker))
         {
-            _viewModel = Ioc.Default.GetRequiredService<SettingsPanePluginsViewModel>();
-            DataContext = _viewModel;
+            page.Activate();
+            page.RefreshData();
         }
-        if (!IsInitialized)
-        {
-            InitializeComponent();
-        }
-        _viewModel.PropertyChanged += ViewModel_PropertyChanged;
         base.OnNavigatedTo(e);
     }
 
@@ -62,6 +84,8 @@ public partial class SettingsPanePlugins
         if (e.Key is not Key.F || Keyboard.Modifiers is not ModifierKeys.Control) return;
         PluginFilterTextbox.Focus();
     }
+
+    internal void FocusFilter() => PluginFilterTextbox.Focus();
 
     private void PluginCollectionView_OnFilter(object sender, FilterEventArgs e)
     {

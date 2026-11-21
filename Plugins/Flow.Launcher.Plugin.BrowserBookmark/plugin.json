@@ -1,6 +1,7 @@
 {
   "ID": "0ECADE17459B49F587BF81DC3A125110",
   "ActionKeyword": "b",
+  "Disabled": true,
   "Name": "Browser Bookmarks",
   "Description": "Search your browser bookmarks",
   "Author": "qianlifeng, Ioannis G.",

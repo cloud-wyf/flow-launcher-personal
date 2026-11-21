@@ -37,6 +37,14 @@ namespace Flow.Launcher.Core
 
         public async Task UpdateAppAsync(bool silentUpdate = true)
         {
+            // Personal releases use explicit installation; private GitHub assets require authenticated downloads.
+            if (GitHubRepository == "https://github.com/cloud-wyf/flow-launcher-personal")
+            {
+                if (!silentUpdate)
+                    _api.OpenUrl(GitHubRepository + "/releases");
+                return;
+            }
+
             await UpdateLock.WaitAsync().ConfigureAwait(false);
             try
             {

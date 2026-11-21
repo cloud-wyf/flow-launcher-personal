@@ -5,6 +5,7 @@ using System.Windows.Controls;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Media;
 using CommunityToolkit.Mvvm.Input;
 using Flow.Launcher.Core.Resource;
@@ -25,7 +26,7 @@ public partial class SettingsPaneThemeViewModel : BaseModel
     private readonly Theme _theme;
 
     private readonly string DefaultFont = Win32Helper.GetSystemDefaultFont();
-    public string BackdropSubText => !Win32Helper.IsBackdropSupported() ? Localize.BackdropTypeDisabledToolTip(): ""; 
+    public string BackdropSubText => !Win32Helper.IsBackdropSupported() ? Localize.BackdropTypeDisabledToolTip(): "";
 
     public static string LinkHowToCreateTheme => @"https://www.flowlauncher.com/theme-builder/";
     public static string LinkThemeGallery => "https://github.com/Flow-Launcher/Flow.Launcher/discussions/1438";
@@ -222,7 +223,7 @@ public partial class SettingsPaneThemeViewModel : BaseModel
 
     public List<BackdropTypeData> BackdropTypesList { get; } =
         DropdownDataGeneric<BackdropTypes>.GetValues<BackdropTypeData>("BackdropTypes");
-    
+
     public BackdropTypes BackdropType
     {
         get => Enum.IsDefined(typeof(BackdropTypes), Settings.BackdropType)
@@ -304,6 +305,50 @@ public partial class SettingsPaneThemeViewModel : BaseModel
     }
 
     public ResultsViewModel PreviewResults { get; }
+    private string _previewLanguage;
+    private Task _themeRefresh;
+    internal Task PendingRefresh => _themeRefresh ?? Task.CompletedTask;
+
+    internal void RefreshNavigationData()
+    {
+        if (_themeRefresh is { IsCompleted: false }) return;
+        _themeRefresh = RefreshNavigationDataAsync();
+    }
+
+    private async Task RefreshNavigationDataAsync()
+    {
+        try
+        {
+            // The theme API reads metadata from disk; keep it off the input thread.
+            var available = await Task.Run(() => App.API.GetAvailableThemes());
+            if (_themes == null || !_themes.Select(theme => (theme.FileNameWithoutExtension, theme.Name, theme.IsDark, theme.HasBlur))
+                .SequenceEqual(available.Select(theme => (theme.FileNameWithoutExtension, theme.Name, theme.IsDark, theme.HasBlur))))
+            {
+                _themes = available;
+                OnPropertyChanged(nameof(Themes));
+            }
+            var selected = Themes.Find(theme => theme.FileNameWithoutExtension == Settings.Theme) ?? Themes.FirstOrDefault();
+            if (_selectedTheme != selected)
+            {
+                _selectedTheme = selected;
+                OnPropertyChanged(nameof(SelectedTheme));
+                OnPropertyChanged(nameof(BackdropType));
+                OnPropertyChanged(nameof(IsBackdropEnabled));
+                OnPropertyChanged(nameof(IsDropShadowEnabled));
+            }
+            DropdownDataGeneric<ColorSchemes>.UpdateLabels(ColorSchemes);
+            if (_previewLanguage != Settings.Language)
+            {
+                OnPropertyChanged(nameof(PlaceholderTextTip));
+                OnPropertyChanged(nameof(BackdropSubText));
+                RefreshPreviewResults();
+            }
+        }
+        catch (Exception exception)
+        {
+            App.API.LogException(nameof(SettingsPaneThemeViewModel), "Failed to refresh theme metadata", exception);
+        }
+    }
 
     public FontFamily SelectedQueryBoxFont
     {
@@ -446,6 +491,14 @@ public partial class SettingsPaneThemeViewModel : BaseModel
         Settings = settings;
         _theme = theme;
         ClockPanelFont = new FontFamily(DefaultFont);
+        // Set main view model to null because the results are for preview only.
+        PreviewResults = new ResultsViewModel(Settings, null);
+        RefreshPreviewResults();
+    }
+
+    private void RefreshPreviewResults()
+    {
+        _previewLanguage = Settings.Language;
         var results = new List<Result>
             {
                 new()
@@ -485,10 +538,8 @@ public partial class SettingsPaneThemeViewModel : BaseModel
                     )
                 }
             };
-        // Set main view model to null because the results are for preview only
-        var vm = new ResultsViewModel(Settings, null);
-        vm.AddResults(results, "PREVIEW");
-        PreviewResults = vm;
+        PreviewResults.Results.Clear();
+        PreviewResults.AddResults(results, "PREVIEW");
     }
 
     [RelayCommand]
@@ -515,12 +566,12 @@ public partial class SettingsPaneThemeViewModel : BaseModel
         WindowHeightSize = 42;
         ItemHeightSize = 58;
     }
-    
+
     [RelayCommand]
     private void Import()
     {
         var resourceDictionary = _theme.GetCurrentResourceDictionary();
-        
+
         if (resourceDictionary["QueryBoxStyle"] is Style queryBoxStyle)
         {
             var fontSizeSetter = queryBoxStyle.Setters
@@ -530,7 +581,7 @@ public partial class SettingsPaneThemeViewModel : BaseModel
             {
                 QueryBoxFontSize = fontSize;
             }
-            
+
             var heightSetter = queryBoxStyle.Setters
                 .OfType<Setter>()
                 .FirstOrDefault(setter => setter.Property == FrameworkElement.HeightProperty);
@@ -539,12 +590,12 @@ public partial class SettingsPaneThemeViewModel : BaseModel
                 WindowHeightSize = height;
             }
         }
-        
+
         if (resourceDictionary["ResultItemHeight"] is double resultItemHeight)
         {
             ItemHeightSize = resultItemHeight;
         }
-        
+
         if (resourceDictionary["ItemTitleStyle"] is Style itemTitleStyle)
         {
             var fontSizeSetter = itemTitleStyle.Setters
@@ -555,7 +606,7 @@ public partial class SettingsPaneThemeViewModel : BaseModel
                 ResultItemFontSize = fontSize;
             }
         }
-        
+
         if (resourceDictionary["ItemSubTitleStyle"] is Style itemSubTitleStyle)
         {
             var fontSizeSetter = itemSubTitleStyle.Setters

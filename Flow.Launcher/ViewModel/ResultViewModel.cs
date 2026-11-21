@@ -64,6 +64,10 @@ namespace Flow.Launcher.ViewModel
 
         public Settings Settings { get; }
 
+        public bool ShowMatchSource { get; init; }
+
+        public string MatchSourceLabel => ShowMatchSource ? ResultPresentation.Label(Result) : string.Empty;
+
         public Visibility ShowDefaultPreview => Result.PreviewPanel == null ? Visibility.Visible : Visibility.Collapsed;
 
         public Visibility ShowIcon
@@ -89,7 +93,7 @@ namespace Flow.Launcher.ViewModel
             {
                 if (PreviewImageAvailable)
                     return Visibility.Visible;
-                
+
                 // Fall back to icon
                 return ShowIcon;
             }
@@ -101,7 +105,7 @@ namespace Flow.Launcher.ViewModel
             {
                 if (Result.RoundedIcon)
                     return IconXY / 2;
-                
+
                 return IconXY;
             }
         }

@@ -1,0 +1,66 @@
+name: Personal Windows Build
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: '可选：创建草稿 Release 的 tag，如 personal-v2.1.4.1'
+        required: false
+        type: string
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: windows-latest
+    env:
+      PYTHONUTF8: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 9.0.x
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build all components and self-contained host
+        shell: pwsh
+        run: ./Scripts/build-personal.ps1
+      - name: Package portable app and personal plugins
+        run: python ./Scripts/package-personal.py
+      - name: Verify identities and configuration migration
+        shell: pwsh
+        run: |
+          python ./Scripts/verify-personal.py
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python ./Scripts/test-migration.py
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          dotnet run --project ./tests/PersonalSmoke/PersonalSmoke.csproj -c Release -- ./.artifacts/downloads/rg.exe
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Flow-Launcher-Personal
+          path: .artifacts/packages/*.zip
+          if-no-files-found: error
+  draft-release:
+    needs: build
+    if: github.event_name == 'workflow_dispatch' && inputs.release_tag != ''
+    runs-on: windows-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: Flow-Launcher-Personal
+          path: packages
+      - name: Create draft release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ inputs.release_tag }}
+          REPOSITORY: ${{ github.repository }}
+          COMMIT: ${{ github.sha }}
+        run: |
+          $assets = Get-ChildItem -LiteralPath "packages" -Filter "*.zip" | ForEach-Object FullName
+          gh release create "$env:RELEASE_TAG" @assets --repo "$env:REPOSITORY" --target "$env:COMMIT" --draft --title "$env:RELEASE_TAG" --generate-notes

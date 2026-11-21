@@ -13,7 +13,7 @@ on:
 
 jobs:
   build:
-
+    if: github.repository == 'Flow-Launcher/Flow.Launcher'
     runs-on: windows-latest
     env:
       FlowVersion: 1.20.2
@@ -35,7 +35,7 @@ jobs:
 #          cache: true
 #          cache-dependency-path: |
 #            Flow.Launcher/packages.lock.json
-#            Flow.Launcher.Core/packages.lock.json            
+#            Flow.Launcher.Core/packages.lock.json
 #            Flow.Launcher.Infrastructure/packages.lock.json
 #            Flow.Launcher.Plugin/packages.lock.json
       - name: Install vpk

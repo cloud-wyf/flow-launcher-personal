@@ -1,0 +1,12 @@
+{
+  "ID": "948d4e4b11de51519ea9ff8a4bb8b4e4",
+  "ActionKeyword": "b",
+  "Name": "个人收藏夹",
+  "Description": "Chrome 账号收藏夹、目录标签、手动标签和全文匹配",
+  "Author": "cloud-wyf",
+  "Version": "1.0.0",
+  "Language": "csharp",
+  "Website": "https://github.com/cloud-wyf/flow-launcher-personal",
+  "ExecuteFileName": "Flow.Launcher.Plugin.PersonalBookmarks.dll",
+  "IcoPath": "Images\\bookmark.png"
+}

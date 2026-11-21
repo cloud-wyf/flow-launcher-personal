@@ -305,3 +305,11 @@ Output-Performance.txt
 # vscode
 .vscode
 .history
+
+# Personal build outputs and local user data
+.artifacts/
+UserData/
+**/UserData/
+personal-backups/
+*.local.json
+.artifacts-*.log

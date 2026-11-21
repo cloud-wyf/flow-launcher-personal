@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pages="clr-namespace:Flow.Launcher.SettingPages"
     xmlns:ui="http://schemas.inkore.net/lib/ui/wpf/modern"
     xmlns:vm="clr-namespace:Flow.Launcher.ViewModel"
     Title="{DynamicResource flowlauncher_settings}"
@@ -14,7 +15,6 @@
     d:DataContext="{d:DesignInstance vm:SettingWindowViewModel}"
     Closed="OnClosed"
     FontFamily="{DynamicResource SettingWindowFont}"
-    Icon="Images\app.ico"
     Left="{Binding SettingWindowLeft, Mode=TwoWay}"
     Loaded="OnLoaded"
     LocationChanged="Window_LocationChanged"
@@ -262,7 +262,10 @@
 
                     </ui:NavigationView.MenuItems>
                     <Grid>
-                        <ui:Frame x:Name="ContentFrame" Margin="0" />
+                        <pages:SettingsPageDeck x:Name="PageDeck" Margin="0" />
+                        <Border x:Name="LoadingShade" Background="{DynamicResource Color01B}">
+                            <TextBlock x:Name="LoadingText" Text="正在加载设置…" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" Foreground="{DynamicResource Color05B}" />
+                        </Border>
                     </Grid>
                 </ui:NavigationView>
             </Grid>

@@ -25,6 +25,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="73" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <DockPanel Grid.Row="0" Margin="5 18 0 0">
@@ -83,8 +84,55 @@
             </ikw:SimpleStackPanel>
         </DockPanel>
 
-        <Border
+        <ui:SettingsExpander
+            x:Name="SearchSourceOrderExpander"
             Grid.Row="1"
+            Margin="5 0 26 8"
+            Header="全局搜索结果顺序"
+            Description="展开后调整各类结果的显示顺序。">
+            <ui:SettingsExpander.HeaderIcon>
+                <ui:FontIcon Glyph="&#xe8cb;" />
+            </ui:SettingsExpander.HeaderIcon>
+            <ui:SettingsExpander.Items>
+                <StackPanel Margin="18 8 18 12">
+                    <ItemsControl ItemsSource="{Binding SearchSources}" AutomationProperties.AutomationId="SearchSourceOrderList">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Margin="0 3">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="32" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="{Binding Position}" VerticalAlignment="Center" Foreground="{DynamicResource Color15B}" />
+                                    <TextBlock Grid.Column="1" Text="{Binding Name}" VerticalAlignment="Center" />
+                                    <Button Grid.Column="2" Margin="8 0" Padding="12 4" Content="上移"
+                                        IsEnabled="{Binding CanMoveUp}" AutomationProperties.AutomationId="{Binding UpAutomationId}"
+                                        Command="{Binding DataContext.MoveSourceUpCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
+                                        CommandParameter="{Binding}" />
+                                    <Button Grid.Column="3" Padding="12 4" Content="下移"
+                                        IsEnabled="{Binding CanMoveDown}" AutomationProperties.AutomationId="{Binding DownAutomationId}"
+                                        Command="{Binding DataContext.MoveSourceDownCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
+                                        CommandParameter="{Binding}" />
+                                </Grid>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                    <TextBlock Margin="0 10 0 8" Text="{Binding SourceOrderStatus}" TextWrapping="Wrap"
+                        Foreground="{DynamicResource Color15B}" AutomationProperties.AutomationId="SourceOrderStatus" />
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                        <Button Margin="0 0 8 0" Padding="12 6" Content="恢复默认"
+                            Command="{Binding ResetSourceOrderCommand}" AutomationProperties.AutomationId="SourceOrderReset" />
+                        <Button Padding="12 6" Content="保存顺序"
+                            Command="{Binding SaveSourceOrderCommand}" AutomationProperties.AutomationId="SourceOrderSave" />
+                    </StackPanel>
+                </StackPanel>
+            </ui:SettingsExpander.Items>
+        </ui:SettingsExpander>
+
+        <Border
+            Grid.Row="2"
             Grid.Column="0"
             Background="{DynamicResource Color01B}">
             <ListBox

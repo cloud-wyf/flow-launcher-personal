@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>Flow.Launcher.Plugin.NoteContent</AssemblyName>
+    <Version>1.1.0</Version>
+    <OutputPath>../../Output/$(Configuration)/PersonalPlugins/Flow.Launcher.Plugin.NoteContent/</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../Flow.Launcher.Plugin/Flow.Launcher.Plugin.csproj"><Private>false</Private></ProjectReference>
+    <None Update="plugin.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="icon.png" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

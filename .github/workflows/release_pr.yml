@@ -9,14 +9,15 @@ on:
 
 jobs:
   update-pr:
+    if: github.repository == 'Flow-Launcher/Flow.Launcher'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      
+
       - uses: actions/setup-python@v7
         with:
           python-version: "3.x"
-      
+
       - name: Run release PR update
         env:
           GITHUB_TOKEN: ${{ secrets.PR_TOKEN }}

@@ -7,6 +7,7 @@ on:
 
 jobs:
   publish:
+    if: github.repository == 'Flow-Launcher/Flow.Launcher'
     runs-on: windows-latest
 
     steps:

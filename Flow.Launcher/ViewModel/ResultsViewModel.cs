@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
+using System.ComponentModel;
 using System.Linq;
 using System.Threading;
 using System.Windows;
@@ -25,6 +26,7 @@ namespace Flow.Launcher.ViewModel
         private readonly Settings _settings;
         private readonly MainViewModel _mainVM;
         private int MaxResults => _settings?.MaxResultsToShow ?? 6;
+        private bool IsSearchResults => _mainVM == null || ReferenceEquals(_mainVM.Results, this);
 
         public ResultsViewModel()
         {
@@ -36,19 +38,21 @@ namespace Flow.Launcher.ViewModel
         {
             _settings = settings;
             _mainVM = mainVM;
-            _settings.PropertyChanged += (s, e) =>
+            PropertyChangedEventManager.AddHandler(_settings, Settings_PropertyChanged, string.Empty);
+        }
+
+        private void Settings_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            switch (e.PropertyName)
             {
-                switch (e.PropertyName)
-                {
-                    case nameof(_settings.MaxResultsToShow):
-                        OnPropertyChanged(nameof(MaxHeight));
-                        break;
-                    case nameof(_settings.ItemHeightSize):
-                        OnPropertyChanged(nameof(ItemHeightSize));
-                        OnPropertyChanged(nameof(MaxHeight));
-                        break;
-                }
-            };
+                case nameof(_settings.MaxResultsToShow):
+                    OnPropertyChanged(nameof(MaxHeight));
+                    break;
+                case nameof(_settings.ItemHeightSize):
+                    OnPropertyChanged(nameof(ItemHeightSize));
+                    OnPropertyChanged(nameof(MaxHeight));
+                    break;
+            }
         }
 
         #endregion
@@ -229,12 +233,9 @@ namespace Flow.Launcher.ViewModel
             if (newRawResults.Count == 0)
                 return Results;
 
-            var newResults = newRawResults.Select(r => new ResultViewModel(r, _settings));
+            var newResults = newRawResults.Select(r => new ResultViewModel(r, _settings) { ShowMatchSource = IsSearchResults });
 
-            return Results.Where(r => r.Result.PluginID != resultId)
-                .Concat(newResults)
-                .OrderByDescending(r => r.Result.Score)
-                .ToList();
+            return SortResults(Results.Where(r => r.Result.PluginID != resultId).Concat(newResults));
         }
 
         private List<ResultViewModel> NewResults(ICollection<ResultsForUpdate> resultsForUpdates)
@@ -245,19 +246,25 @@ namespace Flow.Launcher.ViewModel
                 return Results;
             }
 
-            var newResults = resultsForUpdates.SelectMany(u => u.Results, (u, r) => new ResultViewModel(r, _settings));
+            var newResults = resultsForUpdates.SelectMany(u => u.Results, (u, r) => new ResultViewModel(r, _settings) { ShowMatchSource = IsSearchResults });
 
             if (resultsForUpdates.Any(x => x.ShouldClearExistingResults))
             {
                 App.API.LogDebug(ClassName, $"Existing results are cleared for query");
-                return newResults.OrderByDescending(rv => rv.Result.Score).ToList();
+                return SortResults(newResults);
             }
 
             App.API.LogDebug(ClassName, $"Keeping existing results for {resultsForUpdates.Count} queries");
-            return Results.Where(r => r?.Result != null && resultsForUpdates.All(u => u.ID != r.Result.PluginID))
-                              .Concat(newResults)
-                              .OrderByDescending(rv => rv.Result.Score)
-                              .ToList();
+            return SortResults(Results.Where(r => r?.Result != null && resultsForUpdates.All(u => u.ID != r.Result.PluginID))
+                .Concat(newResults));
+        }
+
+        private List<ResultViewModel> SortResults(IEnumerable<ResultViewModel> results)
+        {
+            var groupSources = IsSearchResults;
+            var order = groupSources ? SearchSourceOrderStore.Current.Sources : null;
+            return results.OrderBy(row => groupSources ? ResultPresentation.GetGroup(row.Result, order) : 0)
+                .ThenByDescending(row => row.Result.Score).ToList();
         }
         #endregion
 

@@ -8,6 +8,7 @@ on:
 
 jobs:
   deploy-website:
+    if: github.repository == 'Flow-Launcher/Flow.Launcher'
     runs-on: ubuntu-latest
     steps:
       - name: Trigger dispatch event for deploying website
@@ -19,8 +20,9 @@ jobs:
             https://api.github.com/repos/Flow-Launcher/flow-launcher.github.io/dispatches \
             -d '{"event_type":"deploy"}')
           if [ "$http_status" -ne 204 ]; then echo "Error: Deploy website failed, HTTP status code is $http_status"; exit 1; fi
-  
+
   publish-chocolatey:
+    if: github.repository == 'Flow-Launcher/Flow.Launcher'
     runs-on: ubuntu-latest
     steps:
       - name: Trigger dispatch event for publishing to Chocolatey

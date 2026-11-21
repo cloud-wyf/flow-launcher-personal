@@ -20,22 +20,58 @@ public partial class SettingsPaneAboutViewModel : BaseModel
     private readonly Settings _settings;
     private readonly Updater _updater;
 
-    public string LogFolderSize
+    private long? _logBytes;
+    private long? _cacheBytes;
+    private Task _folderSizeRefresh;
+    public string LogFolderSize => _logBytes is long size
+        ? $"{Localize.clearlogfolder()} ({BytesToReadableString(size)})" : Localize.clearlogfolder();
+    public string CacheFolderSize => _cacheBytes is long size
+        ? $"{Localize.clearcachefolder()} ({BytesToReadableString(size)})" : Localize.clearcachefolder();
+
+    // Directory enumeration never runs in a binding getter or in the tab switch path.
+    private Task RefreshFolderSizesAsync(bool afterClear = false) => _folderSizeRefresh is { IsCompleted: false }
+        ? afterClear ? RefreshAfterCurrentAsync(_folderSizeRefresh) : _folderSizeRefresh
+        : _folderSizeRefresh = CalculateFolderSizesAsync();
+
+    private async Task RefreshAfterCurrentAsync(Task current)
     {
-        get
+        await current;
+        await RefreshFolderSizesAsync();
+    }
+
+    private async Task CalculateFolderSizesAsync()
+    {
+        var logs = DataLocation.LogDirectory;
+        var cache = DataLocation.CacheDirectory;
+        var sizes = await Task.Run(() => (ReadFolderSize(logs), ReadFolderSize(cache)));
+        if (_logBytes != sizes.Item1)
         {
-            var size = GetLogFiles().Sum(file => file.Length);
-            return $"{Localize.clearlogfolder()} ({BytesToReadableString(size)})";
+            _logBytes = sizes.Item1;
+            OnPropertyChanged(nameof(LogFolderSize));
+        }
+        if (_cacheBytes != sizes.Item2)
+        {
+            _cacheBytes = sizes.Item2;
+            OnPropertyChanged(nameof(CacheFolderSize));
         }
     }
 
-    public string CacheFolderSize
+    private static long ReadFolderSize(string path)
     {
-        get
+        long size = 0;
+        try
         {
-            var size = GetCacheFiles().Sum(file => file.Length);
-            return $"{Localize.clearcachefolder()} ({BytesToReadableString(size)})";
+            var options = new EnumerationOptions { RecurseSubdirectories = true, IgnoreInaccessible = true, AttributesToSkip = FileAttributes.ReparsePoint };
+            foreach (var file in new DirectoryInfo(path).EnumerateFiles("*", options))
+            {
+                try { size += file.Length; }
+                catch (IOException) { }
+                catch (UnauthorizedAccessException) { }
+            }
         }
+        catch (IOException) { }
+        catch (UnauthorizedAccessException) { }
+        return size;
     }
 
     public string Website => Constant.Website;
@@ -43,7 +79,7 @@ public partial class SettingsPaneAboutViewModel : BaseModel
     public string ReleaseNotes => _updater.GitHubRepository + "/releases/latest";
     public string Documentation => Constant.Documentation;
     public string Docs => Constant.Docs;
-    public string Github => Constant.GitHub;
+    public string Github => _updater.GitHubRepository;
 
     public string Version => Constant.Version switch
     {
@@ -77,6 +113,16 @@ public partial class SettingsPaneAboutViewModel : BaseModel
         _settings = settings;
         _updater = updater;
         UpdateEnumDropdownLocalizations();
+        _ = RefreshFolderSizesAsync();
+    }
+
+    internal void RefreshNavigationData()
+    {
+        UpdateEnumDropdownLocalizations();
+        OnPropertyChanged(nameof(ActivatedTimes));
+        OnPropertyChanged(nameof(LogFolderSize));
+        OnPropertyChanged(nameof(CacheFolderSize));
+        _ = RefreshFolderSizesAsync();
     }
 
     private void UpdateEnumDropdownLocalizations()
@@ -193,8 +239,7 @@ public partial class SettingsPaneAboutViewModel : BaseModel
                 }
             });
 
-        OnPropertyChanged(nameof(LogFolderSize));
-
+        _ = RefreshFolderSizesAsync(afterClear: true);
         return success;
     }
 
@@ -263,8 +308,7 @@ public partial class SettingsPaneAboutViewModel : BaseModel
         }
 
         // Raise regardless to cover scenario where size needs to be recalculated if the folder is manually removed on disk.
-        OnPropertyChanged(nameof(CacheFolderSize));
-
+        _ = RefreshFolderSizesAsync(afterClear: true);
         return success;
     }
 
@@ -298,7 +342,7 @@ public partial class SettingsPaneAboutViewModel : BaseModel
 
         return "0 B";
     }
-    
+
     public string SettingWindowFont
     {
         get => _settings.SettingWindowFont;

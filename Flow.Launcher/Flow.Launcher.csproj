@@ -1,5 +1,5 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-  
+<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <UseWPF>true</UseWPF>
@@ -88,15 +88,15 @@
   <ItemGroup>
     <ApplicationDefinition Remove="App.xaml" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <Page Include="App.xaml" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <Page Remove="Themes\ThemeBuilder\Template.xaml" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <Compile Include="..\SolutionAssemblyInfo.cs" Link="Properties\SolutionAssemblyInfo.cs" />
   </ItemGroup>
@@ -179,10 +179,8 @@
     </None>
   </ItemGroup>
 
-  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-    <Exec Command="taskkill /f /fi &quot;IMAGENAME eq Flow.Launcher.exe&quot;" />
-  </Target>
-  
+
+
   <Target Name="RemoveDuplicateAnalyzers" BeforeTargets="CoreCompile">
     <!-- Work around https://github.com/dotnet/wpf/issues/6792 -->
     <ItemGroup>

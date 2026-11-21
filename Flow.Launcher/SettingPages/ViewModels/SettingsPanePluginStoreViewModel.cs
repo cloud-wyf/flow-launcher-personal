@@ -82,20 +82,49 @@ public partial class SettingsPanePluginStoreViewModel : BaseModel
         }
     }
 
-    public IList<PluginStoreItemViewModel> ExternalPlugins => App.API.GetPluginManifest()
-        .Select(p => new PluginStoreItemViewModel(p))
-        .OrderByDescending(p => p.Category == PluginStoreItemViewModel.NewRelease)
-        .ThenByDescending(p => p.Category == PluginStoreItemViewModel.RecentlyUpdated)
-        .ThenByDescending(p => p.Category == PluginStoreItemViewModel.None)
-        .ThenByDescending(p => p.Category == PluginStoreItemViewModel.Installed)
-        .ToList();
+    private sealed record StoreState(UserPlugin Plugin, string ID, string Name, string Description,
+        string Author, string Version, string Language, string Website, string Download, string Source,
+        string Icon, DateTime? Added, DateTime? Released, PluginPair InstalledPair, string InstalledVersion,
+        bool NewRelease, bool RecentlyUpdated);
+    private List<StoreState> _storeState;
+    private IList<PluginStoreItemViewModel> _externalPlugins;
+
+    public IList<PluginStoreItemViewModel> ExternalPlugins
+    {
+        get
+        {
+            if (_externalPlugins == null) RefreshNavigationData();
+            return _externalPlugins;
+        }
+    }
+
+    internal void RefreshNavigationData()
+    {
+        var now = DateTime.Now;
+        var state = App.API.GetPluginManifest().Select(plugin =>
+        {
+            var installed = PluginManager.GetPluginForId(plugin.ID);
+            return new StoreState(plugin, plugin.ID, plugin.Name, plugin.Description, plugin.Author,
+                plugin.Version, plugin.Language, plugin.Website, plugin.UrlDownload, plugin.UrlSourceCode,
+                plugin.IcoPath, plugin.DateAdded, plugin.LatestReleaseDate, installed, installed?.Metadata.Version,
+                now - plugin.DateAdded < TimeSpan.FromDays(7), now - plugin.LatestReleaseDate < TimeSpan.FromDays(7));
+        }).ToList();
+        if (_storeState != null && _storeState.SequenceEqual(state)) return;
+        _externalPlugins = state.Select(item => new PluginStoreItemViewModel(item.Plugin))
+            .OrderByDescending(p => p.Category == PluginStoreItemViewModel.NewRelease)
+            .ThenByDescending(p => p.Category == PluginStoreItemViewModel.RecentlyUpdated)
+            .ThenByDescending(p => p.Category == PluginStoreItemViewModel.None)
+            .ThenByDescending(p => p.Category == PluginStoreItemViewModel.Installed).ToList();
+        _storeState = state;
+        OnPropertyChanged(nameof(ExternalPlugins));
+    }
 
     [RelayCommand]
     private async Task RefreshExternalPluginsAsync()
     {
         if (await App.API.UpdatePluginManifestAsync())
         {
-            OnPropertyChanged(nameof(ExternalPlugins));
+            RefreshNavigationData();
         }
     }
 

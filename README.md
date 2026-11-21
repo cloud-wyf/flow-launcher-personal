@@ -1,3 +1,5 @@
+> **个人维护版：** 本仓库保留官方 v2.1.4 的历史，并维护累积界面、搜索和独立插件修改。构建与迁移请先阅读 [个人版说明](README.personal.md) 和 [维护文档](docs/personal/maintenance.md)。下方保留上游介绍。
+
 <p align="center">
         <a href="https://flowlauncher.com">
         	<img src="https://user-images.githubusercontent.com/6903107/207167068-2196d2a3-2caa-4856-958b-a780fbda95c6.gif" width="500">
@@ -25,7 +27,7 @@ Dedicated to making your workflow more seamless. Search everything from applicat
 
 <img src="https://user-images.githubusercontent.com/6903107/144858082-8b654daf-60fb-4ee6-89b2-6183b73510d1.png" width="100%">
 
-<h4 align="center">  
+<h4 align="center">
   <a href="#-official-channels">Official Channels</a> •
   <a href="#-getting-started">Getting Started</a> •
   <a href="#-features">Features</a> •
@@ -405,7 +407,7 @@ Our project localization is based on [Crowdin](https://crowdin.com). If you woul
 
 ### WPF UI Library
 
-Our UI library is using [iNKORE.UI.WPF.Modern](https://github.com/iNKORE-NET/UI.WPF.Modern). 
+Our UI library is using [iNKORE.UI.WPF.Modern](https://github.com/iNKORE-NET/UI.WPF.Modern).
 
 <a href="https://docs.inkore.net/ui-wpf-modern/introduction">
   <img src="https://github.com/iNKORE-NET/UI.WPF.Modern/blob/main/assets/images/banners/UI.WPF.Modern_Main_1280w.png?raw=true" alt="iNKORE.UI.WPF.Modern" width="400">
@@ -415,7 +417,7 @@ Our UI library is using [iNKORE.UI.WPF.Modern](https://github.com/iNKORE-NET/UI.
 
 All changes to Flow are captured via pull requests. Some new changes may have been merged but are still pending release. This means that while a change may not exist in the current release, it may have been accepted and merged into the dev branch and is available as a pre-release download. It is therefore a good idea to search through the open and closed pull requests before you start to make changes to ensure the change you intend to make is not already done.
 
-Each of the pull requests will be marked with a milestone indicating the planned release version for the change.  
+Each of the pull requests will be marked with a milestone indicating the planned release version for the change.
 
 ### Contributing
 
